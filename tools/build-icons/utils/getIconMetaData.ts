@@ -1,4 +1,5 @@
 import path from 'path';
+import { pathToFileURL } from 'url';
 import { readSvgDirectory } from '@lucide/helpers';
 import { type IconMetadata } from '../types.ts';
 
@@ -6,8 +7,10 @@ async function getIconMetaData(iconDirectory: string): Promise<Record<string, Ic
   const iconJsons = await readSvgDirectory(iconDirectory, '.json');
   const aliasesEntries = await Promise.all(
     iconJsons.map(async (jsonFile: string) => {
+      const filePath = path.join(iconDirectory, jsonFile);
+      const fileUrl = pathToFileURL(filePath).href;
       /** eslint-disable */
-      const file = await import(path.join(iconDirectory, jsonFile), { with: { type: 'json' } });
+      const file = await import(fileUrl, { with: { type: 'json' } });
       return [path.basename(jsonFile, '.json'), file.default];
     }),
   );
