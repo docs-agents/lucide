@@ -1,19 +1,20 @@
 # Lucide Vue
 
-Vue 2 components for Lucide icons that integrate with Vue's Options API and template system. Each icon is a Vue component that renders as an inline SVG, providing familiar Vue development patterns for legacy applications still using Vue 2.
+用于 Lucide 图标的 Vue 2 组件，可与 Vue 的 Options API 和模板系统集成。每个图标都是一个 Vue 组件，渲染为内联 SVG，为仍在使用 Vue 2 的旧应用程序提供熟悉的 Vue 开发模式。
 
-**What you can accomplish:**
-- Use icons as Vue 2 components with Options API integration
-- Maintain legacy Vue 2 applications with modern icon components
-- Integrate with Vue 2's template system and component lifecycle
-- Build applications using Vue 2's familiar syntax and patterns
-- Bridge the gap while planning migration to Vue 3
+**功能概述：**
+
+- 将图标作为 Vue 2 组件使用，支持 Options API 集成
+- 使用现代图标组件维护旧版 Vue 2 应用程序
+- 与 Vue 2 的模板系统和组件生命周期集成
+- 使用 Vue 2 熟悉的语法和模式构建应用程序
+- 在规划迁移到 Vue 3 期间填补空白
 
 ::: danger
-This package is deprecated. Vue 2 is EOF  See [Announcement](https://v2.vuejs.org/eol/). Migrate to Vue 3.
+此包已弃用。Vue 2 已停止维护（EOF）。请参阅[公告](https://v2.vuejs.org/eol/)。请迁移到 Vue 3。
 :::
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -35,44 +36,47 @@ bun add lucide-vue
 
 :::
 
-## How to use
+## 使用方法
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，因此完全支持 tree-shaking。
 
-Each icon can be imported as a Vue component, which renders an inline SVG Element. This way only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Vue 组件导入，渲染为内联 SVG 元素。这样只有导入到项目中的图标才会包含在最终包中，其余图标会被 tree-shaking 移除。
 
-### Example
+### 示例
 
-Additional props can be passed to adjust the icon:
+可以传递额外的 props 来调整图标：
 
 ```vue
 <template>
-  <Camera color="red" :size="32" />
+  <Camera
+    color="red"
+    :size="32"
+  />
 </template>
 
 <script>
-  import { Camera } from 'lucide-vue';
+import { Camera } from 'lucide-vue';
 
-  export default {
-    name: 'My Component',
-    components: { Camera }
-  };
+export default {
+  name: 'My Component',
+  components: { Camera },
+};
 </script>
 ```
 
 ## Props
 
-|  name                   |   type    |  default     |
-| ----------------------- | --------- | ------------ |
-| `size`                  | *number*  | 24           |
-| `color`                 | *string*  | currentColor |
-| `stroke-width`          | *number*  | 2            |
-| `absoluteStrokeWidth`   | *boolean* | false        |
-| `default-class`         | *string*  | lucide-icon  |
+| name                  | type      | default      |
+| --------------------- | --------- | ------------ |
+| `size`                | _number_  | 24           |
+| `color`               | _string_  | currentColor |
+| `stroke-width`        | _number_  | 2            |
+| `absoluteStrokeWidth` | _boolean_ | false        |
+| `default-class`       | _string_  | lucide-icon  |
 
-### Applying props
+### 应用 Props
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，可以将自定义属性作为 props 直接传递给组件。该组件接受所有 SVG 属性作为 props，从而可以灵活地为 SVG 元素设置样式。请参阅 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 呈现属性列表。
 
 ```vue
 <template>
@@ -80,15 +84,15 @@ To customize the appearance of an icon, you can pass custom properties as props 
 </template>
 ```
 
-## One generic icon component
+## 通用的单一图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用的图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例导入了所有 ES Modules，因此使用时请谨慎。导入所有图标会显著增加应用程序的构建大小，对其性能产生负面影响。在使用 `Webpack`、`Rollup` 或 `Vite` 等打包工具时这一点尤为重要。
 :::
 
-### Icon Component Example
+### 图标组件示例
 
 ```vue
 <template>
@@ -96,25 +100,25 @@ The example below imports all ES Modules, so exercise caution when using it. Imp
 </template>
 
 <script>
-  import * as icons from 'lucide-vue';
+import * as icons from 'lucide-vue';
 
-  export default {
-    props: {
-      name: {
-        type: String,
-        required: true
-      }
+export default {
+  props: {
+    name: {
+      type: String,
+      required: true,
     },
-    computed: {
-      icon() {
-        return icons[this.name];
-      }
-    }
-  };
+  },
+  computed: {
+    icon() {
+      return icons[this.name];
+    },
+  },
+};
 </script>
 ```
 
-#### Using the Icon Component
+#### 使用图标组件
 
 ```vue
 <template>

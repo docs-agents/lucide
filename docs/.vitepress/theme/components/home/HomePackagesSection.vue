@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import HomeContainer from './HomeContainer.vue'
-import HomeSectionTitle from './HomeSectionTitle.vue'
+import HomeContainer from './HomeContainer.vue';
+import HomeSectionTitle from './HomeSectionTitle.vue';
 import { useRouter } from 'vitepress';
-import { data } from './HomePackagesSection.data'
+import { data } from './HomePackagesSection.data';
 import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue';
 
-const { go } = useRouter()
+const { go } = useRouter();
 </script>
 
 <template>
   <HomeContainer>
-    <HomeSectionTitle>Available For:</HomeSectionTitle>
+    <HomeSectionTitle>支持以下平台：</HomeSectionTitle>
     <div class="packages-list">
       <a
         v-for="{ name, logo, logoDark } in data.packages"
@@ -36,13 +36,17 @@ const { go } = useRouter()
       </a>
     </div>
     <div class="more-button-wrapper">
-      <VPButton text="And more" href="/packages" theme="alt" class="more-button"/>
+      <VPButton
+        text="更多选项"
+        href="/packages"
+        theme="alt"
+        class="more-button"
+      />
     </div>
   </HomeContainer>
 </template>
 
 <style scoped>
-
 .image-logo {
   object-fit: contain;
   width: 36px;
@@ -65,11 +69,11 @@ const { go } = useRouter()
 }
 
 .package-logo {
-  transition: opacity ease-in .15s;
+  transition: opacity ease-in 0.15s;
 }
 
 .package-logo:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 html.dark .image-logo.light {

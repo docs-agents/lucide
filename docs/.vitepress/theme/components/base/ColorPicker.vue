@@ -39,9 +39,9 @@ const value = computed({
       :id="`${id}-input`"
       :name="`${id}-input`"
       class="color-input-text"
-      aria-label="Color picker input"
+      aria-label="颜色选择器输入"
       v-model="value"
-      placeholder="[default]"
+      placeholder="[默认]"
     />
   </div>
 </template>

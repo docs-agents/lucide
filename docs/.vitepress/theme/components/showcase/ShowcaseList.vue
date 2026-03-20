@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import companies from '../../../data/companiesData.json'
-import componentLibraries from '../../../data/componentLibrariesData.json'
-import GridSection from '../base/GridSection.vue'
-import ShowcaseListItem from "./ShowcaseListItem.vue";
+import companies from '../../../data/companiesData.json';
+import componentLibraries from '../../../data/componentLibrariesData.json';
+import GridSection from '../base/GridSection.vue';
+import ShowcaseListItem from './ShowcaseListItem.vue';
 </script>
 
 <template>
   <GridSection
-    title="Used by"
+    title="使用者"
     :headingLevel="1"
     class="package-group"
   >
@@ -18,7 +18,7 @@ import ShowcaseListItem from "./ShowcaseListItem.vue";
   </GridSection>
 
   <GridSection
-    title="Used in"
+    title="使用于"
     :headingLevel="1"
     class="package-group"
   >

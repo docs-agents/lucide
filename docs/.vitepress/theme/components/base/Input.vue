@@ -74,7 +74,7 @@ defineExpose({
       @click="onClear"
       v-if="type === 'search' && modelValue"
       class="clear-button"
-      aria-label="Clear input"
+      aria-label="清除输入"
       :style="{ right: isMac ? '50px' : '68px' }"
     >
       <Icon
@@ -132,7 +132,7 @@ defineExpose({
   right: 68px;
   top: 9px;
   padding: 4px;
-  transition: background-color .25s;
+  transition: background-color 0.25s;
 }
 
 .shortcut {
@@ -152,21 +152,21 @@ defineExpose({
   pointer-events: none;
 }
 
-.input[type="search"]::-webkit-search-cancel-button {
+.input[type='search']::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 
-.input[type="search"]::-ms-clear {
+.input[type='search']::-ms-clear {
   display: none;
 }
 
-.input[type="search"]::-o-clear {
+.input[type='search']::-o-clear {
   display: none;
 }
 
-.input[type="search"]::-moz-clear {
+.input[type='search']::-moz-clear {
   display: none;
 }
 

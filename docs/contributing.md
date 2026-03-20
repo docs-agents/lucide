@@ -1,7 +1,7 @@
 ---
 aside: false
-title: Contributing to Lucide
-description: Guidelines and instructions for contributing to the Lucide project.
+title: 为 Lucide 贡献代码
+description: 为 Lucide 项目贡献代码的指南和说明。
 ---
 
 <!--@include: ../CONTRIBUTING.md -->

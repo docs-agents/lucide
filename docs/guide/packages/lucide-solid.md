@@ -1,15 +1,16 @@
 # Lucide Solid
 
-SolidJS components for Lucide icons that leverage Solid's fine-grained reactivity system. Each icon is a reactive Solid component that renders as an inline SVG, providing exceptional performance through Solid's compile-time optimizations and reactive primitives.
+用于 Lucide 图标的 SolidJS 组件，利用 Solid 的细粒度响应式系统。每个图标都是一个响应式的 Solid 组件，渲染为内联 SVG，通过 Solid 的编译时优化和响应式原语提供卓越的性能。
 
-**What you can accomplish:**
-- Use icons as SolidJS components with fine-grained reactivity
-- Create highly performant interfaces with Solid's reactive system
-- Build dynamic icon components that respond to signals and stores
-- Integrate seamlessly with Solid's JSX and component patterns
-- Optimize performance with direct icon imports and minimal runtime overhead
+**功能特性：**
 
-## Installation
+- 将图标作为 SolidJS 组件使用，具有细粒度响应式
+- 利用 Solid 的响应式系统构建高性能界面
+- 构建响应信号和存储的动态图标组件
+- 与 Solid 的 JSX 和组件模式无缝集成
+- 通过直接导入图标和最小化运行时开销来优化性能
+
+## 安装
 
 ::: code-group
 
@@ -31,35 +32,45 @@ bun add lucide-solid
 
 :::
 
-## How to use
+## 使用方法
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，因此完全支持 tree-shaking。
 
-Each icon can be imported as a Solid component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Solid 组件导入，渲染为内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终的打包文件中，其他图标会被 tree-shaking 移除。
 
-### Example
+### 示例
 
-Additional props can be passed to adjust the icon:
+可以传递额外的 props 来调整图标：
 
 ```jsx
 import { Camera } from 'lucide-solid';
 
-// Usage
+// 使用
 const App = () => {
-  return <Camera color="red" size={48} />;
+  return (
+    <Camera
+      color="red"
+      size={48}
+    />
+  );
 };
 
 export default App;
 ```
 
-Vite loading/performing issues with the dev server can be resolved by import icons directly from the `lucide-solid/icons` directory:
+如果在使用 Vite 开发服务器时遇到加载/执行问题，可以直接从 `lucide-solid/icons` 目录直接导入图标：
 
 ```jsx
 import Camera from 'lucide-solid/icons/camera';
 
-// Usage
+// 使用
 const App = () => {
-  return <Camera color="red" size={48} />;
+  return (
+    <Camera
+      color="red"
+      size={48}
+    />
+  );
 };
 
 export default App;
@@ -67,53 +78,61 @@ export default App;
 
 ## Props
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| `size`                | _number_  | 24           |
+| `color`               | _string_  | currentColor |
+| `strokeWidth`         | _number_  | 2            |
+| `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 props
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，可以直接将自定义属性作为 props 传递给组件。该组件接受所有 SVG 属性作为 props，从而可以灵活地设置 SVG 元素的样式。详见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/Presentation) 上的 SVG 呈现属性列表。
 
 ```jsx
-// Usage
+// 使用
 const App = () => {
-  return <Camera fill="red" stroke-linejoin="bevel" />;
+  return (
+    <Camera
+      fill="red"
+      stroke-linejoin="bevel"
+    />
+  );
 };
 ```
 
-## With Lucide lab or custom icons
+## 使用 Lucide Lab 或自定义图标
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是不属于 Lucide 主库的图标集合。
 
-They can be used by using the `Icon` component.
-All props like the regular Lucide icons can be passed to adjust the icon appearance.
+可以通过使用 `Icon` 组件来使用它们。
+所有常规 Lucide 图标的 props 都可以传递，用于调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这将基于传入的 iconNode 创建一个单一图标，并渲染为 Lucide 图标组件。
 
 ```jsx
 import { Icon } from 'lucide-solid';
 import { sausage } from '@lucide/lab';
 
 const App = () => (
-  <Icon iconNode={sausage} color="red"/>
+  <Icon
+    iconNode={sausage}
+    color="red"
+  />
 );
 ```
 
-## One generic icon component
+## 一个通用的图标组件
 
-It is possible to create one generic icon component to load icons. It's not recommended.
+可以创建一个通用的图标组件来加载图标。不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important  to keep in mind when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例导入了所有 ES Modules，因此使用时需谨慎。导入所有图标会显著增加应用程序的打包大小，对其性能产生负面影响。在使用 `Webpack`、`Rollup` 或 `Vite` 等打包工具时，这一点尤为重要。
 :::
 
-### Icon Component Example
+### Icon 组件示例
 
 ```tsx
 import { icons, type LucideProps } from 'lucide-solid';
@@ -125,15 +144,20 @@ interface IconProps extends LucideProps {
 }
 
 const Icon = (props: IconProps) => {
-  const [local, others] = splitProps(props, ["name"]);
+  const [local, others] = splitProps(props, ['name']);
 
-  return <Dynamic component={icons[local.name]} {...others} />
+  return (
+    <Dynamic
+      component={icons[local.name]}
+      {...others}
+    />
+  );
 };
 
 export default Icon;
 ```
 
-#### Using the Icon Component
+#### 使用 Icon 组件
 
 ```tsx
 import Icon from './Icon';
@@ -145,11 +169,11 @@ const App = () => {
 export default App;
 ```
 
-## Accessibility
+## 无障碍性
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 将图标从屏幕阅读器中隐藏。
 
-You can add accessibility attributes using aria-labels.
+你可以使用 aria-labels 添加无障碍属性。
 
 ```jsx
 import { Check } from 'lucide-solid';
@@ -159,4 +183,4 @@ const App = () => {
 };
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+有关无障碍性的最佳实践，请参阅我们的[无障碍性指南](../advanced/accessibility.md)。

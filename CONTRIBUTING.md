@@ -1,152 +1,151 @@
+# 贡献指南
 
-# Contribution Guidelines
+:+1::tada: 首先，感谢您抽出时间来贡献！:tada::+1:
 
-:+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
-
-The following is a set of guidelines for contributing to Lucide. Feel free to propose changes to this document in a pull request.
+以下是向 Lucide 项目贡献的指南。欢迎在 pull request 中对本文档提出修改建议。
 
 ## Pull Requests
 
-Feel free to open a pull-request to contribute to this project.
+欢迎提交 pull request 来为本项目做出贡献。
 
-**Working on your first Pull Request?** You can learn how from this *free* series
-[How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github)
+**第一次提交 Pull Request？** 你可以通过这个 _免费_ 系列教程学习如何操作：
+[如何为 GitHub 上的开源项目贡献](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github)
 
-Guidelines for pull requests:
+Pull request 指南：
 
-- __Make your commit messages as descriptive as possible.__ Include as much information as you can. Explain anything that the file diffs themselves won’t make apparent.
-- __Document your pull request__. Explain your fix, link to the relevant issue, add screenshots when adding new icons.
-- __Make sure the target of your pull request is the relevant branch__. Most of bug fixes or new feature should go to the `main` branch.
-- __Include only related work__. If your pull request has unrelated commits, it won't be accepted.
+- **让你的提交信息尽可能详细。** 包含尽可能多的信息。解释文件 diff 本身无法说明的内容。
+- **为你的 pull request 添加文档。** 解释你的修复方案，链接到相关 issue，在添加新图标时附上截图。
+- **确保你的 pull request 目标分支正确。** 大多数 bug 修复或新功能应该提交到 `main` 分支。
+- **只包含相关的工作。** 如果你的 pull request 包含不相关的提交，将不会被接受。
 
-### Icon Pull Requests
+### 图标 Pull Requests
 
-#### Guidelines
+#### 指南
 
-Please make sure you follow the icon guidelines, that should be followed to keep quality and consistency when making icons for Lucide.
+请确保遵循图标指南，这些指南是为了在为 Lucide 制作图标时保持质量和一致性。
 
-Read it here: [ICON_GUIDELINES](https://lucide.dev/docs/icon-design-guide).
+请在此阅读：[图标设计指南](https://lucide.dev/docs/icon-design-guide)。
 
 #### Lucide Studio
 
-For formatting and adjusting SVG icons, [@jguddas](https://github.com/jguddas) made a great tool called [Lucide Studio](https://studio.lucide.dev/). It is a web-based SVG editor that allows you to edit and adjust icons in the Lucide style. You can use it to create new icons or modify existing ones.
+为了格式化和完善 SVG 图标，[@jguddas](https://github.com/jguddas) 创建了一个很棒的工具叫做 [Lucide Studio](https://studio.lucide.dev/)。这是一个基于 Web 的 SVG 编辑器，允许你以 Lucide 风格编辑和调整图标。你可以用它来创建新图标或修改现有图标。
 
-#### Editor guides
+#### 编辑器指南
 
-Here you can find instructions on how to implement the guidelines with different vector graphics editors:
+以下是使用不同矢量图形编辑器实现这些指南的说明：
 
-##### [Adobe Illustrator Guide](https://lucide.dev/docs/illustrator-guide)
+##### [Adobe Illustrator 指南](https://lucide.dev/docs/illustrator-guide)
 
-You can also [download an Adobe Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
+你也可以[下载 Adobe Illustrator 模板](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai)。
 
-##### [Inkscape Guide](https://lucide.dev/docs/inkscape-guide)
+##### [Inkscape 指南](https://lucide.dev/docs/inkscape-guide)
 
-##### [Figma Guide](https://lucide.dev/docs/figma-guide)
+##### [Figma 指南](https://lucide.dev/docs/figma-guide)
 
-##### [Affinity Designer Guide](https://lucide.dev/guide/design/affinity-designer-guide)
+##### [Affinity Designer 指南](https://lucide.dev/guide/design/affinity-designer-guide)
 
-#### Submitting Multiple Icons
+#### 提交多个图标
 
-If you want to submit multiple icons, please separate the icons and group them. That makes reviewing the icons easier and keeps the thread clean and scoped.
-So don't submit multiple icons in one PR that have nothing to do with each other.
-So for example don't create one PR with icons: `arrow-up`, `bicycle`, `arrow-down`.
-Separate them into two PRs; 'pr-01' `arrow`, `arrow-down` and 'pr-02' `bicycle`.
+如果你想提交多个图标，请将图标分开并分组。这样可以更轻松地审查图标，并保持讨论线程简洁且有针对性。
+因此，不要在单个 PR 中提交彼此无关的多个图标。
+例如，不要创建一个包含 `arrow-up`、`bicycle`、`arrow-down` 的 PR。
+将它们分成两个 PR：'pr-01' `arrow`、`arrow-down` 和 'pr-02' `bicycle`。
 
-## Icon Requests
+## 图标请求
 
-Before creating an icon request, please search to see if someone has requested the icon already. If there is an open request, please add a :+1:.
+在创建图标请求之前，请先搜索看看是否已经有人请求过这个图标。如果有开放中的请求，请添加 :+1:。
 
-If the icon has not already been requested, [create an icon request issue](https://github.com/lucide-icons/lucide/issues/new?assignees=&labels=%F0%9F%99%8C+icon+request&projects=&template=01_icon_request.yml) and add as much information as possible.
+如果该图标尚未被请求，请[创建一个图标请求 issue](https://github.com/lucide-icons/lucide/issues/new?assignees=&labels=%F0%9F%99%8C+icon+request&projects=&template=01_icon_request.yml)，并尽可能提供更多信息。
 
-### Icon Requests from Feather
+### 来自 Feather 的图标请求
 
-If you are a designer who wants to contribute to Lucide but you don't know what icons to work on, then have a look at the Requests from Feather. All open, unfinished and valid requests can be found in [Feather Icon Requests](https://github.com/lucide-icons/lucide/issues/119).
+如果你是一位想要为 Lucide 做贡献的设计师，但不知道要制作哪些图标，可以查看 Feather 的请求。所有开放、未完成且有效的请求都可以在 [Feather 图标请求](https://github.com/lucide-icons/lucide/issues/119) 中找到。
 
-## Development
+## 开发
 
-You will need minimum version of [Nodejs 16.4+](https://nodejs.org)
-For package management you will need [PNPM](https://pnpm.io/installation).
-For flutter package development, you need [Flutter 1.17+](https://docs.flutter.dev/get-started/install).
+你至少需要 [Node.js 16.4+](https://nodejs.org) 版本。
+包管理需要使用 [PNPM](https://pnpm.io/installation)。
+Flutter 包开发需要 [Flutter 1.17+](https://docs.flutter.dev/get-started/install)。
 
-After cloning the project you need to run:
+克隆项目后，你需要运行：
 
 ```sh
-pnpm install # Install dependencies, including the workspace packages
+pnpm install # 安装依赖，包括工作区包
 ```
 
-### Packages -> PNPM Workspaces
+### 包 -> PNPM 工作区
 
-To distribute different packages we use [PNPM workspaces](https://pnpm.io/workspaces). Before you start make sure you are familiar with this concept. The concept of working in workspaces is created by Yarn, they have a well written introduction: [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces).
+为了分发不同的包，我们使用 [PNPM 工作区](https://pnpm.io/workspaces)。在开始之前，请确保你熟悉这个概念。工作区概念由 Yarn 创建，他们有很好的介绍：[yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces)。
 
-The configured directory for workspaces is the [packages](https://github.com/lucide-icons/lucide/tree/main/packages) directory, located in the root directory. There you will find all the current packages from lucide.
-There are more workspaces defined, see [`pnpm-workspace.yaml`](https://github.com/lucide-icons/lucide/blob/main/pnpm-workspace.yaml).
+工作区配置的目录是位于根目录下的 [packages](https://github.com/lucide-icons/lucide/tree/main/packages) 目录。在那里你可以找到 lucide 的所有当前包。
+还有更多工作区已定义，参见 [`pnpm-workspace.yaml`](https://github.com/lucide-icons/lucide/blob/main/pnpm-workspace.yaml)。
 
-> Note: One package is not managed by pnpm:  **lucide-flutter**, this package is written in Dart and uses pub for publishing.
+> 注意：有一个包不是由 pnpm 管理的：**lucide-flutter**，这个包使用 Dart 编写，使用 pub 进行发布。
 
-### Generated Code
+### 生成代码
 
-For icons we use one single source of truth the icons svgs located in the icons directory. To distribute icons to the packages we generate code including: icon files with svg paths, index files with imports, and types files. Depending on the use case other necessary code will be generated.
+对于图标，我们使用单一真实来源，即位于 icons 目录中的 SVG 图标。为了将图标分发到各个包，我们生成包括以下内容的代码：包含 SVG 路径的图标文件、包含导入的索引文件以及类型文件。根据用例需要，还会生成其他必要的代码。
 
-The commands for generating this code you will read in the next chapter.
+生成这些代码的命令将在下一章中介绍。
 
-### Commonly used scripts
+### 常用脚本
 
-#### Building
+#### 构建
 
-The build script includes multiple subcommands to: clean the dist directory, generate icon files, generate types files, and build/transpile code for each build format.
+构建脚本包含多个子命令：清理 dist 目录、生成图标文件、生成类型文件，以及为每种构建格式构建/转译代码。
 
 ```sh
 pnpm [package-name] build
 
-#example:
+#示例：
 
 pnpm lucide-react build
 ```
 
-#### Testing
+#### 测试
 
-Run unit tests with jest for each package to make sure all the package apis still works as expected.
+使用 jest 为每个包运行单元测试，以确保所有包的 API 仍然按预期工作。
 
 ```sh
 pnpm [package-name] test
 
-#example:
+#示例：
 
 pnpm lucide-vue test
 ```
 
-Recommended to run the test watcher when making changes.
+建议在修改时运行测试监视器。
 
 ```sh
 pnpm [package-name] test:watch
 
-#example:
+#示例：
 
 pnpm lucide-preact test:watch
 ```
 
-### Unit Testing
+### 单元测试
 
-When adding new features to for example the icon component for a framework. It is required to have this covered with some unit tests.
+在为某个框架的图标组件添加新功能时，需要用一些单元测试来覆盖它。
 
-### Local Testing
+### 本地测试
 
-To test changes in a local project, you can use `yarn link`, `npm link`, `bun link` or `pnpm link` to link the package. Before you do this make sure you've built the package first.
+要在本地项目中测试更改，可以使用 `yarn link`、`npm link`、`bun link` 或 `pnpm link` 来链接包。在此之前，请确保已先构建该包。
 
 ```sh
-# in packages/lucide-react
+# 在 packages/lucide-react 中
 
 npm run build &&
 npm link
 
-# in your local project
+# 在你的本地项目中
 
 npm link lucide-react
 ```
 
-## Project Structure
+## 项目结构
 
-Root directories
+根目录
 
 ```sh
 lucide
@@ -157,63 +156,64 @@ lucide
 └── scripts
 ```
 
-### Docs
+### 文档
 
-The lucide.dev website is using [vitepress](https://vitepress.dev/) to generate the static website. The markdown files are located in the docs directory.
+lucide.dev 网站使用 [vitepress](https://vitepress.dev/) 来生成静态网站。Markdown 文件位于 docs 目录中。
 
-#### Running the Docs Website Locally
+#### 在本地运行文档网站
 
-To test the docs website locally, follow these steps:
+要在本地测试文档网站，请按照以下步骤操作：
 
-1. **Navigate to the docs directory**
+1. **导航到 docs 目录**
 
 ```sh
 cd docs
 ```
 
-2. **Start the Local Development Server**
+2. **启动本地开发服务器**
 
 ```sh
   pnpm run docs:dev
 ```
 
-3. **Open the Website Locally**
+3. **在本地打开网站**
 
-Vitepress should open with the following format:
+Vitepress 应该以下列格式打开：
 
-VitePress dev server is running at:
-- **Local**: `http://localhost:3000/`
-- **Network**: `http://192.168.x.x:3000/`
+VitePress 开发服务器运行在：
 
-### Guides
+- **本地**: `http://localhost:3000/`
+- **网络**: `http://192.168.x.x:3000/`
 
-Detailed documentation about: installation, guides, packages, design guides etc.
+### 指南
 
-### Icons
+关于：安装、指南、包、设计指南等的详细文档。
 
-All the icons of lucide in SVG format. These will be used as source for all the packages and other distributions for the lucide icons.
+### 图标
 
-### Packages
+Lucide 的所有 SVG 格式图标。这些将作为所有包和其他 lucide 图标分发的来源。
 
-Includes all the (npm) packages of lucide.
+### 包
 
-### Scripts
+包含 lucide 的所有（npm）包。
 
-Includes useful scripts to automate certain jobs. Big part of the scripts is the template generation, for example it generates icon components  for all the packages. These scripts are usually executed from the "scripts" section in the package.json.
+### 脚本
 
-## Documentation
+包含用于自动化某些工作的有用脚本。脚本的大部分工作是模板生成，例如为所有包生成图标组件。这些脚本通常从 package.json 的 "scripts" 部分执行。
 
-The documentation files are located in the [docs](https://github.com/lucide-icons/lucide/tree/main/docs) directory. All these markdown files will be loaded in the build of the lucide.dev website.
+## 文档
 
-Feel free to write, adjust or add new markdown files to improve our documentation.
+文档文件位于 [docs](https://github.com/lucide-icons/lucide/tree/main/docs) 目录中。所有这些 Markdown 文件将在 lucide.dev 网站构建时被加载。
 
-## Support
+欢迎编写、调整或添加新的 Markdown 文件来改进我们的文档。
 
-If you need any help or have problems with you contribution. Please don't hesitate to contact the Lucide Community, you can find us on [Github](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
+## 支持
 
-## Credits
+如果你需要帮助或在贡献中遇到问题，请随时联系 Lucide 社区，你可以在 [Github](https://github.com/lucide-icons/lucide) 和 [Discord](https://discord.gg/EH6nSts) 找到我们。
 
-Thank you to all the people who already contributed to Lucide!
+## 致谢
+
+感谢所有为 Lucide 做出贡献的人！
 
 <a href="https://github.com/lucide-icons/lucide/graphs/contributors">
 <img src="https://opencollective.com/lucide-icons/contributors.svg?width=800" /></a>

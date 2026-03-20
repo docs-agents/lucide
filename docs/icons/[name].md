@@ -7,6 +7,7 @@ next: false
 prev: false
 sidebar: true
 ---
+
 <script setup>
 import { computed } from 'vue'
 import { useData } from 'vitepress'
@@ -45,7 +46,7 @@ const codeExample = computed(() => data.codeExamples?.map(
 function releaseTagLink(version) {
   const shouldAddV = satisfies(version, `<0.266.0`)
 
-  return `https://github.com/lucide-icons/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
+  return `https://github.com/docs-agents/lucide/releases/tag/${shouldAddV ? 'v' : ''}${version}`
 }
 </script>
 

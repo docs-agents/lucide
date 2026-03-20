@@ -1,15 +1,16 @@
 # Lucide Astro
 
-Astro components for Lucide icons that work perfectly with Astro's island architecture and multi-framework support. Each icon is an Astro component that renders as an inline SVG, providing excellent performance for static sites and server-side rendering scenarios.
+Astro 组件，专为 Lucide 图标设计，可与 Astro 的岛屿架构和多框架支持完美配合。每个图标都是一个 Astro 组件，渲染为内联 SVG，为静态网站和服务端渲染场景提供卓越的性能。
 
-**What you can accomplish:**
-- Use icons as Astro components with zero JavaScript runtime overhead
-- Build fast, static websites with optimized SVG icons
-- Integrate seamlessly with Astro's component islands and partial hydration
-- Create multi-framework applications where icons work across different UI libraries
-- Optimize performance with direct icon imports and build-time rendering
+**功能特点：**
 
-## Installation
+- 将图标作为 Astro 组件使用，零 JavaScript 运行时开销
+- 使用优化后的 SVG 图标构建快速静态网站
+- 与 Astro 的组件岛屿和部分水合无缝集成
+- 创建跨不同 UI 库的多框架应用程序
+- 通过直接导入图标和构建时渲染优化性能
+
+## 安装
 
 ::: code-group
 
@@ -31,15 +32,15 @@ bun add @lucide/astro
 
 :::
 
-## How to use
+## 使用方法
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，完全支持摇树优化（tree-shaking）。
 
-Each icon can be imported as an Astro component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Astro 组件导入，渲染为内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终的包中，其他图标会被摇树优化掉。
 
-### Example
+### 示例
 
-Default usage:
+默认用法：
 
 ```astro
 ---
@@ -49,7 +50,7 @@ import { Skull } from '@lucide/astro';
 <Skull />
 ```
 
-Additional props can be passed to adjust the icon:
+可以传递额外的属性来调整图标：
 
 ```astro
 ---
@@ -59,7 +60,7 @@ import { Camera } from '@lucide/astro';
 <Camera color="#ff3e98" />
 ```
 
-For faster builds and load times, you can import icons directly from the `@lucide/astro/icons` directory:
+为了加快构建和加载速度，可以直接从 `@lucide/astro/icons` 目录导入图标：
 
 ```astro
 ---
@@ -69,18 +70,18 @@ import CircleAlert from '@lucide/astro/icons/circle-alert';
 <CircleAlert color="#ff3e98" />
 ```
 
-## Props
+## 属性
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
 | `size`                | _number_  | 24           |
 | `color`               | _string_  | currentColor |
 | `stroke-width`        | _number_  | 2            |
 | `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用属性
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，可以将自定义属性作为 props 直接传递给组件。该组件接受所有 SVG 属性作为 props，允许灵活地设置 SVG 元素的样式。详见 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 展示属性列表。
 
 ```astro
 ---
@@ -90,13 +91,13 @@ import { Phone } from '@lucide/astro';
 <Phone fill="#333" />
 ```
 
-This results a filled phone icon.
+这会生成一个实心电话图标。
 
-## Types
+## 类型
 
-The package includes type definitions for all icons. This is useful if you want to dynamically render icons.
+该包包含所有图标的类型定义。如果需要动态渲染图标，这将非常有用。
 
-### Example
+### 示例
 
 ```astro
 ---
@@ -137,16 +138,16 @@ const menuItems: MenuItem[] = [
 }
 ```
 
-## With Lucide lab or custom icons
+## 结合 Lucide Lab 或自定义图标使用
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是一个不在 Lucide 主库中的图标集合。
 
-They can be used by using the `Icon` component.
-All props of the regular Lucide icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件来使用它们。
+常规 Lucide 图标的所有属性都可以传递给它来调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这会根据传入的 iconNode 创建一个单独的图标，并渲染为 Lucide 图标组件。
 
 ```astro
 ---
@@ -158,15 +159,15 @@ import { burger, sausage } from '@lucide/lab';
 <Icon iconNode={sausage} color="red"/>
 ```
 
-## One generic icon component
+## 一个通用图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用的图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application. This may be passable if you're doing SSG and SSR in server environments. However if you're doing SSR in serverless environments, it could negatively affect your app's performance, as a bigger bundle size will translate to an increase in cold starts.
+下面的示例会导入所有 ES Modules，因此使用时请谨慎。导入所有图标会显著增加应用程序的构建大小。如果使用 SSG 和服务端环境中的 SSR，这可能是可以接受的。但是如果在无服务器环境中进行 SSR，可能会对应用程序的性能产生负面影响，因为更大的包大小会导致冷启动时间增加。
 :::
 
-### Icon Component Example
+### 图标组件示例
 
 ```astro
 ---
@@ -183,7 +184,7 @@ const Icon = icons[name];
 <Icon {...restProps} />
 ```
 
-### Using the Icon Component
+### 使用图标组件
 
 ```astro
 ---
@@ -193,11 +194,11 @@ import LucideIcon from './LucideIcon.astro';
 <LucideIcon name="Menu" />
 ```
 
-## Accessibility
+## 无障碍访问
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 将图标从屏幕阅读器中隐藏。
 
-You can add accessibility attributes using aria-labels.
+可以使用 aria-labels 添加无障碍属性。
 
 ```jsx
 ---
@@ -207,4 +208,4 @@ import { Check } from '@lucide/astro';
 <Check aria-label="Task completed" />
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+关于无障碍访问的最佳实践，请参阅我们的[无障碍访问指南](../advanced/accessibility.md)。

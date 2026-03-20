@@ -1,15 +1,16 @@
 # Lucide React
 
-React components for Lucide icons that integrate seamlessly into your React applications. Each icon is a fully-typed React component that renders as an optimized inline SVG, giving you the flexibility of components with the performance of vector graphics.
+用于 Lucide 图标的 React 组件，可无缝集成到 React 应用程序中。每个图标都是一个完全类型化的 React 组件，渲染为优化的内联 SVG，让你在享受组件灵活性的同时拥有矢量图形的性能。
 
-**What you can accomplish:**
-- Import icons as React components with full TypeScript support
-- Pass props to customize size, color, stroke width, and other SVG attributes
-- Use icons in JSX with the same ease as any other React component
-- Benefit from automatic tree-shaking to include only the icons you use
-- Create dynamic icon components that respond to state and user interactions
+**功能概述：**
 
-## Installation
+- 将图标作为 React 组件导入，支持完整的 TypeScript
+- 通过 props 自定义尺寸、颜色、描边宽度和其他 SVG 属性
+- 在 JSX 中像使用其他 React 组件一样轻松使用图标
+- 自动进行 tree-shaking，仅包含你使用的图标
+- 创建可响应状态和用户交互的动态图标组件
+
+## 安装
 
 ::: code-group
 
@@ -31,22 +32,27 @@ bun add lucide-react
 
 :::
 
-## How to use
+## 使用方法
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，因此完全支持 tree-shaking。
 
-Each icon can be imported as a React component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 React 组件导入，渲染为内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终打包文件中，其他图标会被 tree-shaking 移除。
 
-### Example
+### 示例
 
-Additional props can be passed to adjust the icon:
+可以通过传递额外的 props 来调整图标：
 
 ```jsx
 import { Camera } from 'lucide-react';
 
-// Usage
+// 用法
 const App = () => {
-  return <Camera color="red" size={48} />;
+  return (
+    <Camera
+      color="red"
+      size={48}
+    />
+  );
 };
 
 export default App;
@@ -54,67 +60,74 @@ export default App;
 
 ## Props
 
-| name                  | type      | default      |
+| 属性名                | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| `size`                | _number_  | 24           |
+| `color`               | _string_  | currentColor |
+| `strokeWidth`         | _number_  | 2            |
+| `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 props
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，可以将自定义属性作为 props 直接传递给组件。组件接受所有 SVG 属性作为 props，允许灵活地设置 SVG 元素的样式。详见 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 展示属性列表。
 
 ```jsx
-// Usage
+// 用法
 const App = () => {
-  return <Camera size={48} fill="red" />;
+  return (
+    <Camera
+      size={48}
+      fill="red"
+    />
+  );
 };
 ```
 
-## With Lucide lab or custom icons
+## 结合 Lucide Lab 或自定义图标使用
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是一些不属于 Lucide 主库图标的集合。
 
-They can be used by using the `Icon` component.
-All props like regular lucide icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件来使用它们。
+与普通 lucide 图标一样，所有 props 都可以传递以调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这会基于传入的 iconNode 创建一个图标，并渲染为 Lucide 图标组件。
 
 ```jsx
 import { Icon } from 'lucide-react';
 import { coconut } from '@lucide/lab';
 
-const App = () => (
-  <Icon iconNode={coconut} />
-);
+const App = () => <Icon iconNode={coconut} />;
 ```
 
-## Dynamic Icon Component
+## 动态图标组件
 
-It is possible to create one generic icon component to load icons. But it is not recommended, since it is importing all icons during the build. This increases build time and the different modules it will create.
+可以创建一个通用的图标组件来加载图标。但不建议这样做，因为它会在构建时导入所有图标。这会增加构建时间和生成的模块数量。
 
-`DynamicIcon` is useful for applications that want to show icons dynamically by icon name. For example, when using a content management system with where icon names are stored in a database.
+`DynamicIcon` 适用于需要通过图标名称动态显示图标的应用程序。例如，在使用内容管理系统且图标名称存储在数据库中时。
 
-For static use cases, it is recommended to import the icons directly.
+对于静态使用场景，建议直接导入图标。
 
-The same props can be passed to adjust the icon appearance. The `name` prop is required to load the correct icon.
+同样的 props 可以传递以调整图标外观。`name` prop 是必需的，用于加载正确的图标。
 
 ```jsx
 import { DynamicIcon } from 'lucide-react/dynamic';
 
 const App = () => (
-  <DynamicIcon name="camera" color="red" size={48} />
+  <DynamicIcon
+    name="camera"
+    color="red"
+    size={48}
+  />
 );
 ```
 
-## Accessibility
+## 无障碍访问
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 将图标从屏幕阅读器中隐藏。
 
-You can add accessibility attributes using aria-labels.
+你可以使用 aria-label 添加无障碍属性。
 
 ```jsx
 import { Check } from 'lucide-react';
@@ -124,4 +137,4 @@ const App = () => {
 };
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+有关无障碍访问的最佳实践，请参阅我们的[无障碍访问指南](../advanced/accessibility.md)。

@@ -1,174 +1,174 @@
 [
   {
     "name": "accessibility",
-    "title": "Accessibility"
+    "title": "Accessibility（无障碍）"
   },
   {
     "name": "account",
-    "title": "Accounts & access"
+    "title": "Accounts & access（账户与访问）"
   },
   {
     "name": "animals",
-    "title": "Animals"
+    "title": "Animals（动物）"
   },
   {
     "name": "arrows",
-    "title": "Arrows"
+    "title": "Arrows（箭头）"
   },
   {
     "name": "brands",
-    "title": "Brands"
+    "title": "Brands（品牌）"
   },
   {
     "name": "buildings",
-    "title": "Buildings"
+    "title": "Buildings（建筑）"
   },
   {
     "name": "charts",
-    "title": "Charts"
+    "title": "Charts（图表）"
   },
   {
     "name": "communication",
-    "title": "Communication"
+    "title": "Communication（通信）"
   },
   {
     "name": "connectivity",
-    "title": "Connectivity"
+    "title": "Connectivity（连接）"
   },
   {
     "name": "cursors",
-    "title": "Cursors"
+    "title": "Cursors（光标）"
   },
   {
     "name": "design",
-    "title": "Design"
+    "title": "Design（设计）"
   },
   {
     "name": "development",
-    "title": "Coding & development"
+    "title": "Coding & development（编码与开发）"
   },
   {
     "name": "devices",
-    "title": "Devices"
+    "title": "Devices（设备）"
   },
   {
     "name": "emoji",
-    "title": "Emoji"
+    "title": "Emoji（表情符号）"
   },
   {
     "name": "files",
-    "title": "File icons"
+    "title": "File icons（文件图标）"
   },
   {
     "name": "finance",
-    "title": "Finance"
+    "title": "Finance（金融）"
   },
   {
     "name": "food-beverage",
-    "title": "Food & beverage"
+    "title": "Food & beverage（餐饮）"
   },
   {
     "name": "gaming",
-    "title": "Gaming"
+    "title": "Gaming（游戏）"
   },
   {
     "name": "home",
-    "title": "Home"
+    "title": "Home（首页）"
   },
   {
     "name": "layout",
-    "title": "Layout"
+    "title": "Layout（布局）"
   },
   {
     "name": "mail",
-    "title": "Mail"
+    "title": "Mail（邮件）"
   },
   {
     "name": "math",
-    "title": "Mathematics"
+    "title": "Mathematics（数学）"
   },
   {
     "name": "medical",
-    "title": "Medical"
+    "title": "Medical（医疗）"
   },
   {
     "name": "multimedia",
-    "title": "Multimedia"
+    "title": "Multimedia（多媒体）"
   },
   {
     "name": "nature",
-    "title": "Nature"
+    "title": "Nature（自然）"
   },
   {
     "name": "navigation",
-    "title": "Navigation, Maps, and POIs"
+    "title": "Navigation, Maps, and POIs（导航、地图和地点）"
   },
   {
     "name": "notifications",
-    "title": "Notification"
+    "title": "Notification（通知）"
   },
   {
     "name": "people",
-    "title": "People"
+    "title": "People（人物）"
   },
   {
     "name": "photography",
-    "title": "Photography"
+    "title": "Photography（摄影）"
   },
   {
     "name": "science",
-    "title": "Science"
+    "title": "Science（科学）"
   },
   {
     "name": "seasons",
-    "title": "Seasons"
+    "title": "Seasons（季节）"
   },
   {
     "name": "security",
-    "title": "Security"
+    "title": "Security（安全）"
   },
   {
     "name": "shapes",
-    "title": "Shapes"
+    "title": "Shapes（形状）"
   },
   {
     "name": "shopping",
-    "title": "Shopping"
+    "title": "Shopping（购物）"
   },
   {
     "name": "social",
-    "title": "Social"
+    "title": "Social（社交）"
   },
   {
     "name": "sports",
-    "title": "Sports"
+    "title": "Sports（体育）"
   },
   {
     "name": "sustainability",
-    "title": "Sustainability"
+    "title": "Sustainability（可持续发展）"
   },
   {
     "name": "text",
-    "title": "Text formatting"
+    "title": "Text formatting（文本格式）"
   },
   {
     "name": "time",
-    "title": "Time & calendar"
+    "title": "Time & calendar（时间和日历）"
   },
   {
     "name": "tools",
-    "title": "Tools"
+    "title": "Tools（工具）"
   },
   {
     "name": "transportation",
-    "title": "Transportation"
+    "title": "Transportation（交通）"
   },
   {
     "name": "travel",
-    "title": "Travel"
+    "title": "Travel（旅行）"
   },
   {
     "name": "weather",
-    "title": "Weather"
+    "title": "Weather（天气）"
   }
 ]

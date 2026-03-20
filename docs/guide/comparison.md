@@ -2,24 +2,24 @@
 title: Comparison
 ---
 
-# Comparison
+# 对比
 
-## Lucide vs Feather Icons
+## Lucide 与 Feather Icons
 
-Lucide is a community-driven fork of [Feather Icons](https://github.com/feathericons/feather).
+Lucide 是 [Feather Icons](https://github.com/feathericons/feather) 的社区驱动分支项目。
 
-The decision to create Lucide arose from growing dissatisfaction with the moderation of the Feather Icons project. With more than 300 open issues and over 100 open PRs, the Feather Icons project has been abandoned and is no longer actively maintained. Unfortunately, this means that numerous developers and designers have invested their time in contributing to Feather Icons without the possibility of their PRs being accepted.
+创建 Lucide 的决定源于对 Feather Icons 项目管理日益增长的不满。由于积累了超过 300 个未解决的问题和超过 100 个未处理的 PR，Feather Icons 项目已被搁置，不再活跃维护。不幸的是，这意味着众多开发者和设计师在为 Feather Icons 贡献的过程中投入了大量时间，却无法获得 PR 被采纳的可能。
 
-In an effort to expand the icon set while remaining true to the original minimalist design language, Lucide is driven by a community of developers and designers. We strive to grow together and maintain a faithful continuation of the project.
+为了在扩展图标库的同时保持原有的极简设计语言，Lucide 由一群开发者和设计师共同驱动。我们致力于共同成长，并对该项目进行忠实的延续。
 
-### Why should I choose Lucide over Feather Icons?
+### 为什么我应该选择 Lucide 而不是 Feather Icons？
 
-- Lucide has expanded its icon set by 500+ in the last few years. Lucide now has over 1000 icons, while Feather has around 287 icons.
-- Well maintained code base.
-- Active community.
+- 在过去几年中，Lucide 的图标库已扩展了 500 多个。Lucide 目前拥有超过 1000 个图标，而 Feather 只有约 287 个图标。
+- 代码库维护良好。
+- 社区活跃。
 
-### Should I migrate to Lucide?
+### 我应该迁移到 Lucide 吗？
 
-That depends on whether you're satisfied with the icons from Feather Icons. If that is the case, it may not be worth the effort.
-However, if you find yourself struggling and feeling limited by the icons provided by Feather, you can consider migrating.
-When we forked, we didn't remove any icons, but some icons have been renamed.
+这取决于您是否对 Feather Icons 提供的图标感到满意。如果满意，可能不值得花费精力进行迁移。
+然而，如果您发现自己受到 Feather 提供的图标的限制而感到困扰和束缚，可以考虑迁移。
+在我们 fork 时，我们没有删除任何图标，但一些图标已被重命名。

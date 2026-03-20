@@ -4,16 +4,17 @@ title: Lucide Preact
 
 # Lucide Preact
 
-Preact components for Lucide icons that provide React-like development experience with a smaller footprint. Each icon is a lightweight Preact component that renders as an inline SVG, perfect for applications that need React compatibility with minimal bundle size.
+为 Lucide 图标提供的 Preact 组件，以更小的体积提供类似 React 的开发体验。每个图标都是一个轻量级的 Preact 组件，渲染为内联 SVG，非常适合需要 React 兼容性但希望减少包体积的应用程序。
 
-**What you can accomplish:**
-- Use icons as Preact components with React-like syntax and patterns
-- Build lightweight applications with Preact's smaller runtime
-- Create fast, responsive interfaces with minimal JavaScript overhead
-- Maintain React compatibility while reducing bundle size
-- Integrate with existing Preact applications and component libraries
+**你可以实现的：**
 
-## Installation
+- 使用类似 React 的语法和模式将图标作为 Preact 组件使用
+- 使用 Preact 更小的运行时构建轻量级应用程序
+- 以最少的 JavaScript 开销创建快速、响应式的界面
+- 在减少包体积的同时保持 React 兼容性
+- 与现有的 Preact 应用程序和组件库集成
+
+## 安装
 
 ::: code-group
 
@@ -35,22 +36,27 @@ bun add lucide-preact
 
 :::
 
-## How to use
+## 如何使用
 
-Lucide is built with ES Modules, so it's completely tree-shakable.
+Lucide 基于 ES Modules 构建，因此完全支持 tree-shaking。
 
-Each icon can be imported as a Preact component, which renders an inline SVG element. This way, only the icons that are imported into your project are included in the final bundle. The rest of the icons are tree-shaken away.
+每个图标都可以作为 Preact 组件导入，渲染为内联 SVG 元素。这样，只有导入到项目中的图标才会包含在最终包中，其余图标会被 tree-shaking 移除。
 
-### Example
+### 示例
 
-Additional props can be passed to adjust the icon:
+可以传递额外的 props 来调整图标：
 
 ```jsx
 import { Camera } from 'lucide-preact';
 
-// Usage
+// 用法
 const App = () => {
-  return <Camera color="red" size={48} />;
+  return (
+    <Camera
+      color="red"
+      size={48}
+    />
+  );
 };
 
 export default App;
@@ -58,55 +64,58 @@ export default App;
 
 ## Props
 
-| name                  | type      | default      |
+| 名称                  | 类型      | 默认值       |
 | --------------------- | --------- | ------------ |
-| `size`                | *number*  | 24           |
-| `color`               | *string*  | currentColor |
-| `strokeWidth`         | *number*  | 2            |
-| `absoluteStrokeWidth` | *boolean* | false        |
+| `size`                | _number_  | 24           |
+| `color`               | _string_  | currentColor |
+| `strokeWidth`         | _number_  | 2            |
+| `absoluteStrokeWidth` | _boolean_ | false        |
 
-### Applying props
+### 应用 Props
 
-To customize the appearance of an icon, you can pass custom properties as props directly to the component. The component accepts all SVG attributes as props, which allows flexible styling of the SVG elements. See the list of SVG Presentation Attributes on [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation).
+要自定义图标的外观，可以将自定义属性作为 props 直接传递给组件。该组件接受所有 SVG 属性作为 props，允许灵活地设置 SVG 元素的样式。参见 [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/Presentation) 上的 SVG 展示属性列表。
 
 ```jsx
-// Usage
+// 用法
 const App = () => {
-  return <Camera fill="red" stroke-linejoin="bevel" />;
+  return (
+    <Camera
+      fill="red"
+      stroke-linejoin="bevel"
+    />
+  );
 };
 ```
 
-> SVG attributes in Preact aren't transformed, so if you want to change for example the `stroke-linejoin` you need to pass it in kebabcase. Basically how the SVG spec want you to write it. See this topic in the [Preact documentation](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx).
+> Preact 中的 SVG 属性不会经过转换，所以如果你想改变 `stroke-linejoin`，需要使用 kebab-case 写法。基本上就是 SVG 规范要求你写的形式。参见 [Preact 文档](https://preactjs.com/guide/v10/differences-to-react/#svg-inside-jsx) 中的这个话题。
 
-## With Lucide lab or custom icons
+## 使用 Lucide Lab 或自定义图标
 
-[Lucide lab](https://github.com/lucide-icons/lucide-lab) is a collection of icons that are not part of the Lucide main library.
+[Lucide Lab](https://github.com/lucide-icons/lucide-lab) 是一组不属于 Lucide 主库的图标集合。
 
-They can be used by using the `Icon` component.
-All props like regular lucide icons can be passed to adjust the icon appearance.
+可以通过 `Icon` 组件来使用它们。
+所有常规 lucide 图标的 props 都可以传递以调整图标外观。
 
-### Using the `Icon` component
+### 使用 `Icon` 组件
 
-This creates a single icon based on the iconNode passed and renders a Lucide icon component.
+这会基于传入的 iconNode 创建一个单一图标，并渲染为 Lucide 图标组件。
 
 ```jsx
 import { Icon } from 'lucide-preact';
 import { coconut } from '@lucide/lab';
 
-const App = () => (
-  <Icon iconNode={coconut} />
-);
+const App = () => <Icon iconNode={coconut} />;
 ```
 
-## One generic icon component
+## 一个通用的图标组件
 
-It is possible to create one generic icon component to load icons, but it is not recommended.
+可以创建一个通用的图标组件来加载图标，但不推荐这样做。
 
 ::: danger
-The example below imports all ES Modules, so exercise caution when using it. Importing all icons will significantly increase the build size of the application, negatively affecting its performance. This is especially important when using bundlers like `Webpack`, `Rollup`, or `Vite`.
+下面的示例导入了所有 ES Modules，因此使用时请谨慎。导入所有图标会显著增加应用程序的构建大小，对性能产生负面影响。在使用 `Webpack`、`Rollup` 或 `Vite` 等打包工具时这一点尤为重要。
 :::
 
-### Icon Component Example
+### 图标组件示例
 
 ```jsx
 import { icons } from 'lucide-preact';
@@ -114,13 +123,18 @@ import { icons } from 'lucide-preact';
 const Icon = ({ name, color, size }) => {
   const LucideIcon = icons[name];
 
-  return <LucideIcon color={color} size={size} />;
+  return (
+    <LucideIcon
+      color={color}
+      size={size}
+    />
+  );
 };
 
 export default Icon;
 ```
 
-#### Using the Icon Component
+#### 使用图标组件
 
 ```jsx
 import Icon from './Icon';
@@ -132,18 +146,18 @@ const App = () => {
 export default App;
 ```
 
-## Accessibility
+## 无障碍性
 
-By default, we hide icons from screen readers using `aria-hidden="true"`.
+默认情况下，我们使用 `aria-hidden="true"` 将图标从屏幕阅读器中隐藏。
 
-You can add accessibility attributes using aria-labels.
+你可以使用 aria-label 添加无障碍属性。
 
 ```jsx
 import { Check } from 'lucide-preact';
 
 const App = () => {
-  return <Check aria-label="Task completed" />;
+  return <Check aria-label="任务已完成" />;
 };
 ```
 
-For best practices on accessibility, please see our [accessibility guide](../advanced/accessibility.md).
+有关无障碍性的最佳实践，请参阅我们的[无障碍性指南](../advanced/accessibility.md)。

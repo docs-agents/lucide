@@ -1,9 +1,9 @@
 ---
-title: Icons
-description: Browse all Lucide icons.
+title: 图标
+description: 浏览所有 Lucide 图标。
 layout: page
 outline: 2
-outlineTitle: Categories
+outlineTitle: 分类
 sidebar: true
 head:
   - - link

@@ -7,30 +7,30 @@ nextPage:
 
 # What is Lucide?
 
-Lucide is an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols in digital and non-digital projects. The library aims to make it easier for designers and developers to incorporate icons into their projects by providing several official [packages](/packages).
+Lucide 是一个开源图标库，提供 1000+ 矢量（SVG）文件，用于在数字和非数字项目中显示图标和符号。该库旨在通过提供多个官方[软件包](/packages)，帮助设计人员和开发人员更轻松地将图标集成到他们的项目中。
 
-## Available Icons
+## 可用图标
 
-Lucide contains icons with different variants and states, allowing users to choose the most suitable icon for their needs. And if a desired icon isn't available yet, users can open a design request, and the Lucide community contributors will help provide new icons. With more icons to choose from, users have more options to work with in their projects.
+Lucide 包含具有不同变体和状态的图标，用户可以选择最适合其需求的图标。如果所需的图标尚不可用，用户可以提交设计请求，Lucide 社区贡献者将帮助提供新图标。随着可选图标的增多，用户在项目中有更多的选择。
 
-### Complete Set of Icons
+### 完整的图标集
 
-As new applications with specific features arise, Lucide aims to provide a complete set of icons for every project. The community follows a set of design rules when designing new icons. These rules maintain standards for the icons, such as recognizability, consistency in style, and readability at all sizes. While creativity is valued in new icons, recognizable design conventions are important to ensure that the icons are easily identifiable by users.
+随着具有特定功能的新应用不断涌现，Lucide 旨在为每个项目提供一套完整的图标。社区在设计新图标时遵循一套设计规则。这些规则为图标维护了标准，例如可识别性、风格一致性和各种尺寸下的可读性。虽然新图标注重创意，但可识别的设计惯例对于确保图标被用户轻松识别非常重要。
 
-## Code Optimization
+## 代码优化
 
-In addition to design, code is also important. Assets like icons can significantly increase bandwidth usage in web projects. With the growing internet, Lucide has a responsibility to keep their assets as small as possible. To achieve this, Lucide uses SVG compression and specific code architecture for tree-shaking abilities. After tree-shaking, you only ship the icons you used, which helps to keep software distribution size to a minimum.
+除了设计之外，代码也很重要。像图标这样的资源可能会显著增加 Web 项目的带宽使用。随着互联网的不断发展，Lucide 有责任使其资源尽可能小。为实现这一目标，Lucide 使用 SVG 压缩和特定的代码架构以支持 tree-shaking。经过 tree-shaking 后，你只需要打包你使用的图标，这有助于将软件分发大小保持在最小。
 
-## Accessibility
+## 无障碍访问
 
-Icons are pictures that show what something means without using words. They can be very helpful because they can quickly give information.
+图标是一种不使用文字就能展示事物含义的图片。它们非常有用，因为可以快速传达信息。
 
-However, not everyone can understand them easily. Read more about [how to use Lucide in an accessible way](./advanced/accessibility.md).
+然而，并非每个人都能轻松理解它们。了解更多关于[如何在无障碍方式下使用 Lucide](./advanced/accessibility.md)的信息。
 
-## Official Packages
+## 官方软件包
 
-Lucide's official packages are designed to work on different platforms, making it easier for users to integrate icons into their projects. The packages are available for various technologies, including [Web (Vanilla)](https://lucide.dev/guide/packages/lucide), [React](https://lucide.dev/guide/packages/lucide-react), [React Native](https://lucide.dev/guide/packages/lucide-react-native), [Vue](https://lucide.dev/guide/packages/lucide-vue), [Vue 3](https://lucide.dev/guide/packages/lucide-vue-next), [Svelte](https://lucide.dev/guide/packages/lucide-svelte), [Preact](https://lucide.dev/guide/packages/lucide-preact), [Solid](https://lucide.dev/guide/packages/lucide-solid), [Angular](https://lucide.dev/guide/packages/lucide-angular), [Astro](https://lucide.dev/guide/packages/lucide-astro), and [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs).
+Lucide 的官方软件包旨在支持不同平台，使集成图标到项目中变得更加容易。这些软件包支持多种技术，包括 [Web（原生）](https://lucide.dev/guide/packages/lucide)、[React](https://lucide.dev/guide/packages/lucide-react)、[React Native](https://lucide.dev/guide/packages/lucide-react-native)、[Vue](https://lucide.dev/guide/packages/lucide-vue)、[Vue 3](https://lucide.dev/guide/packages/lucide-vue-next)、[Svelte](https://lucide.dev/guide/packages/lucide-svelte)、[Preact](https://lucide.dev/guide/packages/lucide-preact)、[Solid](https://lucide.dev/guide/packages/lucide-solid)、[Angular](https://lucide.dev/guide/packages/lucide-angular)、[Astro](https://lucide.dev/guide/packages/lucide-astro) 和 [NodeJS](https://lucide.dev/guide/packages/lucide-static#nodejs)。
 
-## Community
+## 社区
 
-If you have any questions about Lucide, feel free to reach out to the community. You can find them on [GitHub](https://github.com/lucide-icons/lucide) and [Discord](https://discord.gg/EH6nSts).
+如果你对 Lucide 有任何问题，欢迎联系社区。你可以在 [GitHub](https://github.com/docs-agents/lucide) 和 [Discord](https://discord.gg/EH6nSts) 上找到他们。

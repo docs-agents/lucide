@@ -1,9 +1,10 @@
 ---
-title: Showcase
+title: 案例展示
 layout: page
 outline: 2
-outlineTitle: Showcase
+outlineTitle: 案例展示
 ---
+
 <script setup>
 import PageContainer from '.vitepress/theme/components/PageContainer.vue'
 import ShowcaseList from '.vitepress/theme/components/showcase/ShowcaseList.vue'

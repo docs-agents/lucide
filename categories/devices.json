@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
-  "title": "Devices",
+  "title": "Devices（设备）",
   "icon": "smartphone"
 }

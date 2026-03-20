@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { data } from './PackageList.data'
-import GridSection from '../base/GridSection.vue'
-import PackageListItem from "./PackageListItem.vue";
+import { data } from './PackageList.data';
+import GridSection from '../base/GridSection.vue';
+import PackageListItem from './PackageListItem.vue';
 </script>
 
 <template>
   <GridSection
-    title="Packages"
+    title="软件包"
     :headingLevel="1"
     class="package-group"
   >
@@ -17,7 +17,7 @@ import PackageListItem from "./PackageListItem.vue";
   </GridSection>
 
   <GridSection
-    title="Third-party packages"
+    title="第三方软件包"
     :headingLevel="2"
     class="package-group"
   >

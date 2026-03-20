@@ -5,15 +5,13 @@ import strokeWidth from './examples/stroke-width-icon/files.ts'
 import absoluteStrokeWidth from './examples/absolute-stroke-width-icon/files.ts'
 </script>
 
-# Stroke width
+# 描边宽度
 
-All icons are designed with SVG elements using strokes.
-These have a default stroke width of `2px`.
+所有图标都使用描边（stroke）来设计 SVG 元素。默认描边宽度为 `2px`。
 
-The `strokeWidth` can be adjusted to create a different look of the icons.
+可以调整 `strokeWidth` 来创建不同的图标外观。
 
-## Adjusting stroke width with `strokeWidth` prop
-
+## 使用 `strokeWidth` 属性调整描边宽度
 
 <Sandpack
   template="react"
@@ -30,19 +28,19 @@ The `strokeWidth` can be adjusted to create a different look of the icons.
   }"
 />
 
-## Absolute stroke width
+## 绝对描边宽度
 
-When adjusting the `size` prop the size of the stroke width will be relative to the size of the icon, this is the default SVG behavior. The `absoluteStrokeWidth` prop is introduced to adjust this behavior to make the stroke width constant no matter the size of the icon.
+当调整 `size` 属性时，描边宽度会相对于图标大小变化，这是默认的 SVG 行为。引入 `absoluteStrokeWidth` 属性可以调整这一行为，使描边宽度无论图标大小如何都保持不变。
 
-This means that when `absoluteStrokeWidth` is enabled and the `size` of the icons is set to `48px` the `strokeWidth` will still be `2px` on the screen.
+这意味着当启用 `absoluteStrokeWidth` 且图标 `size` 设置为 `48px` 时，`strokeWidth` 在屏幕上仍然是 `2px`。
 
-Note `2px` is the default stroke width for a Lucide icon, this can be adjusted to all sizes.
+注意，`2px` 是 Lucide 图标的默认描边宽度，可以调整为任何值。
 
-![Absolute stroke width comparison](../../images/absolute-stroke-width-compare.png?raw=true "Absolute stroke width comparison")
+![绝对描边宽度对比](../../images/absolute-stroke-width-compare.png?raw=true 'Absolute stroke width comparison')
 
-### Adjusting stroke width with `absoluteStrokeWidth` prop
+### 使用 `absoluteStrokeWidth` 属性调整描边宽度
 
-Setting `absoluteStrokeWidth` to `true` will make the stroke width absolute.
+将 `absoluteStrokeWidth` 设置为 `true` 将使描边宽度变为绝对值。
 
 <Sandpack
   template="react"

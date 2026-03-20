@@ -1,20 +1,19 @@
 <script setup lang="ts">
 import Badge from '../base/Badge.vue';
 import HomeContainer from './HomeContainer.vue';
-import { data } from './HomeHeroBefore.data'
-
+import { data } from './HomeHeroBefore.data';
 </script>
 <template>
   <HomeContainer class="container">
-    <Badge
-      :href="`https://github.com/lucide-icons/lucide/releases/tag/${data.version}`"
-    >v{{ data.version }}</Badge>
+    <Badge :href="`https://github.com/docs-agents/lucide/releases/tag/${data.version}`"
+      >v{{ data.version }}</Badge
+    >
   </HomeContainer>
 </template>
 
 <style scoped>
 .container {
-  margin-block: 0;;
+  margin-block: 0;
   margin-top: 37px;
   margin-bottom: -96px;
   display: flex;
@@ -38,5 +37,4 @@ import { data } from './HomeHeroBefore.data'
     display: inline-block;
   }
 }
-
 </style>

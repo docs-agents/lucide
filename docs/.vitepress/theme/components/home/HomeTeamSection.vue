@@ -1,25 +1,24 @@
 <script setup lang="ts">
 import { useData } from 'vitepress';
-import HomeContainer from './HomeContainer.vue'
-import GridSection from '../base/GridSection.vue'
-import TeamMemberCard, { TeamMember } from './TeamMemberCard.vue'
-import teamData from '../../../data/teamData.json'
+import HomeContainer from './HomeContainer.vue';
+import GridSection from '../base/GridSection.vue';
+import TeamMemberCard, { TeamMember } from './TeamMemberCard.vue';
+import teamData from '../../../data/teamData.json';
 import HomeSponsorCard from './HomeSponsorCard.vue';
-import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue'
+import VPDocAsideCarbonAds from 'vitepress/dist/client/theme-default/components/VPDocAsideCarbonAds.vue';
 
-
-const { theme } = useData()
+const { theme } = useData();
 </script>
 
 <template>
-   <HomeContainer>
+  <HomeContainer>
     <GridSection
-      title="Meet the team"
+      title="认识团队"
       :headingLevel="2"
       class="team-members"
     >
       <TeamMemberCard
-        v-for="teamMember in (teamData as TeamMember[])"
+        v-for="teamMember in teamData as TeamMember[]"
         v-bind="teamMember"
       />
     </GridSection>
@@ -30,7 +29,6 @@ const { theme } = useData()
     />
   </HomeContainer>
 </template>
-
 
 <style scoped>
 .team-members {
@@ -53,7 +51,7 @@ const { theme } = useData()
 
 .ad-card {
   margin: 32px auto 0;
-  width: 100%;;
+  width: 100%;
   max-width: 500px;
   display: flex;
   flex-direction: row;

@@ -5,7 +5,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
 </script>
 
 <template>
-  <HomeSectionTitle :headingLevel="3"> Sponsor the Lucide maintainers </HomeSectionTitle>
+  <HomeSectionTitle :headingLevel="3"> 赞助 Lucide 维护者 </HomeSectionTitle>
   <Card class="sponsor-card">
     <img
       src="/company-logos/open-collective-light.svg"
@@ -24,7 +24,7 @@ import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vu
     <VPButton
       href="https://opencollective.com/lucide-icons"
       class="sponsor-button"
-      text="Become a sponsor"
+      text="成为赞助商"
     />
   </Card>
 </template>

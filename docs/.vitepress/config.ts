@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress';
 import sidebar from './sidebar';
 import getStructuredData from './getStructuredData';
 
-const title = 'Lucide';
-const socialTitle = 'Lucide Icons';
-const description = 'Beautiful & consistent icon toolkit made by the community.';
+const title = 'Lucide 图标 - 中文文档';
+const socialTitle = 'Lucide Icons 中文文档';
+const description =
+  'Lucide 图标库中文文档。由社区打造的精美一致的图标工具包，支持 Vue、React、Svelte 等多框架。提供 1000+ 开源 SVG 图标，中文界面。';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -39,6 +40,22 @@ export default defineConfig({
   },
   head: [
     [
+      'meta',
+      {
+        name: 'keywords',
+        content:
+          'Lucide, 图标, Icons, SVG图标, 开源图标, React图标, Vue图标, Svelte图标, Angular图标, 图标库, icon library, lucide icons, 中文, 汉化',
+      },
+    ],
+    [
+      'meta',
+      {
+        name: 'description',
+        content:
+          'Lucide 图标库中文文档。由社区打造的精美一致的开源 SVG 图标工具包，支持 React、Vue、Svelte、Angular 等多框架。',
+      },
+    ],
+    [
       'link',
       {
         rel: 'preconnect',
@@ -57,7 +74,7 @@ export default defineConfig({
       'meta',
       {
         property: 'og:locale',
-        content: 'en_US',
+        content: 'zh_CN',
       },
     ],
     [
@@ -159,17 +176,17 @@ export default defineConfig({
       pageData.params?.name
     ) {
       const iconName = pageData.params.name;
-      pageData.title = `${iconName} icon details`;
+      pageData.title = `${iconName} 图标详情`;
 
       const taggedAs = pageData.params?.tags?.length
-        ? `Tagged as: ${pageData.params.tags.join(', ')}.`
+        ? `标签：${pageData.params.tags.join(', ')}。`
         : '';
       const categorizedIn = pageData.params?.category?.length
-        ? `Categorized in: ${pageData.params.category.join(', ')}.`
+        ? `分类：${pageData.params.category.join(', ')}。`
         : '';
 
       pageData.description =
-        `Details and related icons for ${iconName} icon. ${taggedAs} ${categorizedIn}`.trim();
+        `${iconName} 图标的详情和相关图标。${taggedAs} ${categorizedIn}`.trim();
 
       const structuredData = await getStructuredData(iconName, pageData);
 
@@ -187,23 +204,23 @@ export default defineConfig({
       dark: '/logo.dark.svg',
     },
     nav: [
-      { text: 'Icons', link: '/icons/' },
-      { text: 'Guide', link: '/guide/' },
-      { text: 'Packages', link: '/packages' },
-      { text: 'Showcase', link: '/showcase' },
-      { text: 'License', link: '/license' },
+      { text: '图标', link: '/icons/' },
+      { text: '指南', link: '/guide/' },
+      { text: '包', link: '/packages' },
+      { text: '展示', link: '/showcase' },
+      { text: '许可证', link: '/license' },
     ],
     sidebar,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lucide-icons/lucide' },
+      { icon: 'github', link: 'https://github.com/docs-agents/lucide' },
       { icon: 'discord', link: 'https://discord.gg/EH6nSts' },
     ],
     footer: {
-      message: 'Released under the ISC License.',
-      copyright: `Copyright © ${new Date().getFullYear()} Lucide Contributors`,
+      message: '基于 ISC 许可证发布',
+      copyright: `版权所有 © ${new Date().getFullYear()} Lucide 贡献者`,
     },
     editLink: {
-      pattern: 'https://github.com/lucide-icons/lucide/edit/main/docs/:path',
+      pattern: 'https://github.com/docs-agents/lucide/edit/main/docs/:path',
     },
     carbonAds: {
       code: 'CWYIC53U',

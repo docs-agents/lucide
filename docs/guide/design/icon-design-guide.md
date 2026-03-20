@@ -1,46 +1,46 @@
 ---
-title: Icon Design Guide
+title: 图标设计指南
 ---
 
-## Icon Design Principles
+## 图标设计原则
 
-Here are rules that should be followed to keep quality and consistency when making icons for Lucide.
+以下是制作 Lucide 图标时应遵循的规则，以保持质量和一致性。
 
-### 1. Icons must be designed on a **24 by 24 pixels** canvas.
+### 1. 图标必须在 **24 x 24 像素**的画布上设计。
 
-![24px-24px](../../images/24px-24px.svg?raw=true "24px-24px")
+![24px-24px](../../images/24px-24px.svg?raw=true '24px-24px')
 
-### 2. Icons must have at least **1 pixel padding** within the canvas.
+### 2. 图标在画布内必须有至少 **1 像素的内边距**。
 
-![1px-padding](../../images/1px-padding.svg?raw=true "1px-padding")
+![1px-padding](../../images/1px-padding.svg?raw=true '1px-padding')
 
-### 3. Icons must have a **stroke width of 2 pixels**.
+### 3. 图标必须有 **2 像素的描边宽度**。
 
-![2px-stroke](../../images/2px-stroke.svg?raw=true "2px-stroke")
+![2px-stroke](../../images/2px-stroke.svg?raw=true '2px-stroke')
 
-### 4. Icons must use **round joins**.
+### 4. 图标必须使用**圆角连接**。
 
-![round-joints](../../images/round-joints.svg?raw=true "round-joints")
+![round-joints](../../images/round-joints.svg?raw=true 'round-joints')
 
-### 5. Icons must use **round caps**.
+### 5. 图标必须使用**圆角端点**。
 
-![round-caps](../../images/round-caps.svg?raw=true "round-caps")
+![round-caps](../../images/round-caps.svg?raw=true 'round-caps')
 
-### 6. Icons must use **centered strokes**.
+### 6. 图标必须使用**居中描边**。
 
-![centered-strokes](../../images/centered-strokes.svg?raw=true "centered-strokes")
+![centered-strokes](../../images/centered-strokes.svg?raw=true 'centered-strokes')
 
-### 7. Shapes (such as rectangles) must have a **border radius of**
+### 7. 形状（如矩形）必须有**圆角半径**，规则如下
 
-#### A. **2 pixels** if they are at least 8 pixels in size
+#### A. 至少 8 像素大小 → **2 像素**
 
-![2px-border-radius](../../images/2px-border-radius.svg?raw=true "2px-border-radius")
+![2px-border-radius](../../images/2px-border-radius.svg?raw=true '2px-border-radius')
 
-#### B. **1 pixel** if they are smaller than 8 pixels in size
+#### B. 小于 8 像素大小 → **1 像素**
 
-![1px-border-radius](../../images/1px-border-radius.svg?raw=true "1px-border-radius")
+![1px-border-radius](../../images/1px-border-radius.svg?raw=true '1px-border-radius')
 
-### 8. Distinct elements must have **2 pixels of spacing between each other**
+### 8. 不同元素之间必须有 **2 像素的间距**
 
 ![2px-element-spacing](../../images/2px-element-spacing.svg?raw=true '2px-element-spacing')
 
@@ -48,93 +48,93 @@ Here are rules that should be followed to keep quality and consistency when maki
 
 ![2px-element-spacing-abrupt-cut](../../images/2px-element-spacing-abrupt-cut.svg?raw=true '2px-element-spacing-abrupt-cut')
 
-### 9. Icons should have a similar optical volume to `circle` and `square`.
+### 9. 图标应该有与 `circle` 和 `square` 相似的视觉体积。
 
-![optical-volume-ideal](../../images/optical-volume-ideal.svg?raw=true "optical-volume-ideal")
+![optical-volume-ideal](../../images/optical-volume-ideal.svg?raw=true 'optical-volume-ideal')
 
-![optical-volume-low](../../images/optical-volume-low.svg?raw=true "optical-volume-low")
+![optical-volume-low](../../images/optical-volume-low.svg?raw=true 'optical-volume-low')
 
-![optical-volume-high](../../images/optical-volume-high.svg?raw=true "optical-volume-high")
+![optical-volume-high](../../images/optical-volume-high.svg?raw=true 'optical-volume-high')
 
-**Tip:** place your icon next to the circle or square icon and blur them both; your icon should not feel much darker than the base shape.
+**提示：**将你的图标放在 circle 或 square 图标旁边，然后将两者都模糊化；你的图标不应该比基础形状看起来暗很多。
 
-### 10. Icons should be visually centered by their center of gravity.
+### 10. 图标应该按重心视觉居中。
 
-![visually-centered](../../images/visually-centered.svg?raw=true "visually-centered")
+![visually-centered](../../images/visually-centered.svg?raw=true 'visually-centered')
 
-![visually-centered-bad](../../images/visually-centered-bad.svg?raw=true "visually-centered-bad")
+![visually-centered-bad](../../images/visually-centered-bad.svg?raw=true 'visually-centered-bad')
 
-**Tip:** place your icon both above/below and next to the square or circle icon and check if it feels off center. Symmetrical icons should always be aligned to the center.
+**提示：**将你的图标放在 square 或 circle 图标的上方/下方和旁边，检查是否看起来偏离中心。对称图标应始终与中心对齐。
 
-### 11. Icons should have similar visual density and level of detail.
+### 11. 图标应该有相似的视觉密度和细节层次。
 
-![density-ideal](../../images/density-ideal.svg?raw=true "density-ideal")
+![density-ideal](../../images/density-ideal.svg?raw=true 'density-ideal')
 
-![density-high](../../images/density-high.svg?raw=true "density-high")
+![density-high](../../images/density-high.svg?raw=true 'density-high')
 
-**Tip:** try to make abstractions to dense elements. Blur your icon, and when blurred it should not feel overly dark.
+**提示：**尝试对密集元素进行抽象化。模糊你的图标，模糊后它不应该看起来过暗。
 
-### 12. Continuous curves should join smoothly.
+### 12. 连续曲线应平滑连接。
 
-![curvature-smooth](../../images/curvature-smooth.svg?raw=true "curvature-smooth")
+![curvature-smooth](../../images/curvature-smooth.svg?raw=true 'curvature-smooth')
 
-![curvature-uneven](../../images/curvature-uneven.svg?raw=true "curvature-uneven")
+![curvature-uneven](../../images/curvature-uneven.svg?raw=true 'curvature-uneven')
 
-**Tip:** make sure to use arcs or quadratic curves. When using cubic curves control points should have mirrored angles for smooth curves.
+**提示：**确保使用圆弧或二次曲线。使用三次曲线时，控制点应该有镜像角度以获得平滑曲线。
 
-### 13. Icons should aim to be pixel perfect so that they will be sharp on low DPI displays.
+### 13. 图标应力求像素完美，以便在低 DPI 显示器上保持清晰。
 
-![pixel-perfection-ideal](../../images/pixel-perfection-ideal.svg?raw=true "pixel-perfection-ideal")
+![pixel-perfection-ideal](../../images/pixel-perfection-ideal.svg?raw=true 'pixel-perfection-ideal')
 
-![pixel-perfection-bad](../../images/pixel-perfection-bad.svg?raw=true "pixel-perfection-bad")
+![pixel-perfection-bad](../../images/pixel-perfection-bad.svg?raw=true 'pixel-perfection-bad')
 
-**Tip:** whenever possible align elements and arc centers to the grid.
+**提示：**尽可能将元素和圆弧中心对齐到网格。
 
-### 14. Icons should share common shapes
+### 14. 图标应共享通用形状
 
-You should try to create consistent groups and variants, reuse and try to create uniformity.
-Consistency inside groups and variants has a lower priority than the rules above.
+你应该尝试创建一致的组和变体，重用并尝试创建统一性。
+组和变体内部的一致性比上述规则优先级低。
 
-**Example:** All `-off` icons should look the same unless it for example violates the optical volume rule.
+**示例：**所有 `-off` 图标应该看起来相同，除非例如违反了视觉体积规则。
 
-**Tip:** Try to not move the base shape to enable better use in a toggle context.
+**提示：**尽量不移动基础形状，以便在切换上下文中更好地使用。
 
-## Naming conventions
+## 命名规范
 
-1. Icon names use lower kebab case.\
-   For example: `arrow-up` instead of `Arrow Up`.
+1. 图标名称使用小写 kebab case。\
+   例如：使用 `arrow-up` 而不是 `Arrow Up`。
 
-2. Icon names use International English names, as opposed to local variants.\
-   For example:  `color` instead of `colour`.
+2. 图标名称使用国际英语名称，而不是本地变体。\
+   例如：使用 `color` 而不是 `colour`。
 
-3. Icons should be named for what they depict rather than their use case or what they represent.\
-   For example: `floppy-disk` instead of `save` and `circle-slash` rather than `ban`.
+3. 图标应根据其描绘的内容命名，而不是其用例或代表的含义。\
+   例如：使用 `floppy-disk` 而不是 `save`，使用 `circle-slash` 而不是 `ban`。
 
-4. Icons that are part of a group are named `<group>-<variant>`.\
-   For example: `badge-plus` is based on `badge`.
+4. 属于某个组的图标命名为 `<group>-<variant>`。\
+   例如：`badge-plus` 基于 `badge`。
 
-5. Icon names for alternate icons should represent what makes the alternate unique instead of being numbered.\
-   For example: `send-horizontal` instead of `send-2`.
+5. 备用图标的名称应表示使其独特的内容，而不是编号。\
+   例如：使用 `send-horizontal` 而不是 `send-2`。
 
-6. Names containing numerals are not allowed, unless the number itself is represented in the icon.\
-   For example: `arrow-down-0-to-1` contains both numerals.
+6. 不允许包含数字的名称，除非数字本身在图标中表示。\
+   例如：`arrow-down-0-to-1` 包含数字。
 
-7. Icons depicting multiple elements (e.g. a person and a circle) of different sizes must list these elements in decreasing order of size.\
-   For example: if the circle is bigger, it should be `circle-person`, if the person is bigger, it should be `person-circle`.
+7. 描绘不同大小的多个元素（如人和圆圈）的图标必须按大小递减顺序列出这些元素。\
+   例如：如果圆圈更大，应该是 `circle-person`；如果人更大，应该是 `person-circle`。
 
-8. Icons depicting multiple elements of roughly equal sizes (e.g. a `ruler` and a `pencil`) must list these elements front to back in case one element is in front of the other, otherwise in English reading order (top to bottom, left to right).\
-   For example: if the `pencil` is either in front of, above or left of `ruler`, it should be `pencil-ruler`, otherwise, it should be `ruler-pencil`.
+8. 描绘大小大致相等的多个元素（如 `ruler` 和 `pencil`）的图标，如果一个元素在另一个元素前面，则必须从前到后列出这些元素，否则按英语阅读顺序（从上到下，从左到右）。\
+   例如：如果 `pencil` 在 `ruler` 的前面、上方或左侧，应该是 `pencil-ruler`，否则应该是 `ruler-pencil`。
 
-9. Icons depicting some sort of variation of an element must use the `[element]-[modifier]` naming scheme, with modifiers being applied to each element respectively.\
-   For example: a dashed circle must be named `circle-dashed`, not `dashed-circle`, and in coordination with the previous guidelines, a dashed circle containing a broken heart would be named `circle-dashed-heart-broken`, due to the heart being smaller than the circle.
+9. 描绘某种元素变体的图标必须使用 `[element]-[modifier]` 命名方案，修饰符分别应用于每个元素。\
+   例如：虚线圆圈必须命名为 `circle-dashed`，而不是 `dashed-circle`，并与前一条准则配合，包含破碎心脏的虚线圆圈应命名为 `circle-dashed-heart-broken`，因为心脏比圆圈小。
 
-## Code Conventions
+## 代码规范
 
-Before an icon is added to the library, we like to have readable and optimized SVG code.
+在将图标添加到库之前，我们希望有可读且优化过的 SVG 代码。
 
-### Global Attributes
+### 全局属性
 
-For each icon these attributes are applied, corresponding to the above rules.
+每个图标都应用以下属性，对应上述规则。
 
 ```xml
 <svg
@@ -152,45 +152,38 @@ For each icon these attributes are applied, corresponding to the above rules.
 </svg>
 ```
 
-### Minify paths
+### 压缩路径
 
-The code of paths can sometimes get quite large. To reduce file size we like to minify the code.
-We recommend to use [Lucide Studio](https://studio.lucide.dev/) to tidy paths to 3 points of precision.
+路径代码有时会很大。为了减小文件大小，我们喜欢压缩代码。
+我们建议使用 [Lucide Studio](https://studio.lucide.dev/) 将路径整理为 3 位精度。
 
-### Allowed elements
+### 允许的元素
 
-SVG files may only contain simple path and shape elements, which may not have any attributes other than sizing and spacing.\
-In practice only the following elements and attributes are allowed:
-* `<path d>`
-* `<line x1 x2>`
-* `<polygon points>`
-* `<polyline points>`
-* `<circle cx cy r>`
-* `<ellipse cx cy rx ry>`
-* `<rect x y width height rx>`
+SVG 文件只能包含简单的路径和形状元素，除了大小和间距外不能有其他属性。
+实际上只允许以下元素和属性：
 
-This also means that no transforms, filters, fills or explicit strokes are allowed.
+- `<path d>`
+- `<line x1 x2>`
+- `<polygon points>`
+- `<polyline points>`
+- `<circle cx cy r>`
+- `<ellipse cx cy rx ry>`
+- `<rect x y width height rx>`
 
-Never use [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use). While it may sometimes seem like a good way to optimize file size, there's no way to ensure that the referenced element IDs will be unique once the SVGs are embedded in HTML documents.
+这也意味着不允许使用 transforms、filters、fills 或显式描边。
 
-## JSON metadata descriptor
+不要使用 [`<use>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use)。虽然这有时似乎是优化文件大小的一种好方法，但无法确保引用元素的 ID 在 SVG 嵌入 HTML 文档后保持唯一。
 
-Each icon added must also come with a matching JSON file listing tags and categories for the icon.
-Please use the following template:
+## JSON 元数据描述符
+
+每个添加的图标还必须附带一个匹配的 JSON 文件，列出图标的标签和类别。
+请使用以下模板：
 
 ```json
 {
   "$schema": "../icon.schema.json",
-  "contributors": [
-    "github-username",
-    "another-github-username"
-  ],
-  "tags": [
-    "foo",
-    "bar"
-  ],
-  "categories": [
-    "devices"
-  ]
+  "contributors": ["github-username", "another-github-username"],
+  "tags": ["foo", "bar"],
+  "categories": ["devices"]
 }
 ```

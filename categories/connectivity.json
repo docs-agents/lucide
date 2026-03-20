@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
-  "title": "Connectivity",
+  "title": "Connectivity（连接）",
   "icon": "wifi"
 }

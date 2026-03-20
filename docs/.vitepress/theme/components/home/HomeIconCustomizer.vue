@@ -1,59 +1,46 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import { syncRef, useCssVar } from '@vueuse/core'
-import HomeContainer from './HomeContainer.vue'
-import RangeSlider from '../base/RangeSlider.vue'
-import InputField from '../base/InputField.vue'
-import ColorPicker from '../base/ColorPicker.vue'
-import ResetButton from '../base/ResetButton.vue'
-import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue'
-import Switch from '../base/Switch.vue'
+import { ref, watch } from 'vue';
+import { syncRef, useCssVar } from '@vueuse/core';
+import HomeContainer from './HomeContainer.vue';
+import RangeSlider from '../base/RangeSlider.vue';
+import InputField from '../base/InputField.vue';
+import ColorPicker from '../base/ColorPicker.vue';
+import ResetButton from '../base/ResetButton.vue';
+import HomeIconCustomizerIcons from './HomeIconCustomizerIcons.vue';
+import Switch from '../base/Switch.vue';
 
+const iconContainer = ref<HTMLElement | null>();
+const color = ref('currentColor');
+const strokeWidth = ref(2);
+const size = ref(24);
+const absoluteStrokeWidth = ref(false);
 
-const iconContainer = ref<HTMLElement | null>()
-const color = ref('currentColor')
-const strokeWidth = ref(2)
-const size = ref(24)
-const absoluteStrokeWidth = ref(false)
+const colorCssVar = useCssVar('--customize-color', iconContainer, {
+  initialValue: 'default',
+});
 
-const colorCssVar = useCssVar(
-  '--customize-color',
-  iconContainer,
-  {
-    initialValue: 'default'
-  }
-)
+const strokeWidthCssVar = useCssVar('--customize-strokeWidth', iconContainer, {
+  initialValue: '2',
+});
 
-const strokeWidthCssVar = useCssVar(
-  '--customize-strokeWidth',
-  iconContainer,
-  {
-    initialValue: '2'
-  }
-)
+const sizeCssVar = useCssVar('--customize-size', iconContainer, {
+  initialValue: '24',
+});
 
-const sizeCssVar = useCssVar(
-  '--customize-size',
-  iconContainer,
-  {
-    initialValue: '24'
-  }
-)
+syncRef(color, colorCssVar);
+syncRef(strokeWidth, strokeWidthCssVar);
+syncRef(size, sizeCssVar);
 
-syncRef(color, colorCssVar)
-syncRef(strokeWidth, strokeWidthCssVar)
-syncRef(size, sizeCssVar)
-
-function resetStyle () {
-  color.value = 'currentColor'
-  strokeWidth.value = 2
-  size.value = 24
-  absoluteStrokeWidth.value = false
+function resetStyle() {
+  color.value = 'currentColor';
+  strokeWidth.value = 2;
+  size.value = 24;
+  absoluteStrokeWidth.value = false;
 }
 
 watch(absoluteStrokeWidth, (enabled) => {
-  iconContainer.value?.classList.toggle('absolute-stroke-width', enabled)
-})
+  iconContainer.value?.classList.toggle('absolute-stroke-width', enabled);
+});
 </script>
 
 <template>
@@ -61,11 +48,11 @@ watch(absoluteStrokeWidth, (enabled) => {
     <div class="card">
       <div class="card-column">
         <h2 class="title">
-          Style as you please
+          自由定制样式
           <ResetButton @click="resetStyle"></ResetButton>
         </h2>
         <p class="copy">
-          Lucide has a lot of customization options to match the icons with your UI.
+          Lucide 提供丰富的自定义选项，可让您随心所欲地调整图标样式以匹配您的用户界面。
         </p>
 
         <div
@@ -74,17 +61,20 @@ watch(absoluteStrokeWidth, (enabled) => {
         >
           <InputField
             id="icon-color"
-            label="Color"
+            label="颜色"
             class="color-picker-field"
           >
             <template #display>
-              <ColorPicker v-model="color" id="icon-color"  />
+              <ColorPicker
+                v-model="color"
+                id="icon-color"
+              />
             </template>
           </InputField>
 
           <InputField
             id="stroke-width"
-            label="Stroke width"
+            label="描边宽度"
           >
             <template #display>
               <span class="customize-label">{{ strokeWidth }}px</span>
@@ -101,7 +91,7 @@ watch(absoluteStrokeWidth, (enabled) => {
 
           <InputField
             id="size"
-            label="Size"
+            label="尺寸"
           >
             <template #display>
               <span class="customize-label">{{ size }}px</span>
@@ -118,7 +108,7 @@ watch(absoluteStrokeWidth, (enabled) => {
 
           <InputField
             id="absolute-stroke-width"
-            label="Absolute Stroke width"
+            label="绝对描边宽度"
           >
             <template #display>
               <Switch
@@ -131,7 +121,10 @@ watch(absoluteStrokeWidth, (enabled) => {
         </div>
       </div>
 
-      <div class="icons-container card-column" ref="iconContainer">
+      <div
+        class="icons-container card-column"
+        ref="iconContainer"
+      >
         <HomeIconCustomizerIcons />
       </div>
     </div>

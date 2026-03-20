@@ -66,12 +66,12 @@ const customizingActive = computed(() => {
     :class="{ customized: customizingActive }"
   >
     <div class="card-header">
-      <h2 class="card-title">Customizer</h2>
+      <h2 class="card-title">自定义工具</h2>
       <ResetButton @click="resetStyle"></ResetButton>
     </div>
     <InputField
       id="icon-color"
-      label="Color"
+      label="颜色"
     >
       <template #display>
         <ColorPicker
@@ -84,7 +84,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="stroke-width"
-      label="Stroke width"
+      label="线宽"
     >
       <template #display>
         <span class="customize-label">{{ strokeWidth }}px</span>
@@ -101,7 +101,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="size"
-      label="Size"
+      label="尺寸"
     >
       <template #display>
         <span class="customize-label">{{ size }}px</span>
@@ -118,7 +118,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="absolute-stroke-width"
-      label="Absolute stroke width"
+      label="绝对线宽"
     >
       <Switch
         id="absolute-stroke-width"

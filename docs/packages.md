@@ -1,10 +1,11 @@
 ---
-title: Packages
-description: Discover the various packages available in the Lucide ecosystem.
+title: 包
+description: 探索 Lucide 生态系统中可用的各种包。
 layout: page
 outline: 2
-outlineTitle: Packages
+outlineTitle: 包
 ---
+
 <script setup>
 import PageContainer from '.vitepress/theme/components/PageContainer.vue'
 import PackageList from '.vitepress/theme/components/packages/PackageList.vue'

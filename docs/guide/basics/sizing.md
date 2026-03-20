@@ -7,11 +7,11 @@ import sizeIconFontExample from './examples/size-icon-font-example/files.ts'
 import sizeIconTailwind from './examples/size-icon-tailwind-example/files.ts'
 </script>
 
-# Sizing
+# 尺寸
 
-By default, the size of all icons is `24px` by `24px`. The size is adjustable using the `size` prop and CSS.
+默认情况下，所有图标的大小为 `24px` × `24px`。可以使用 `size` 属性和 CSS 来调整尺寸。
 
-## Adjusting the icon size using the `size` prop
+## 使用 `size` 属性调整图标尺寸
 
 <Sandpack
   template="react"
@@ -28,9 +28,9 @@ By default, the size of all icons is `24px` by `24px`. The size is adjustable us
   }"
 />
 
-## Adjusting the icon size via CSS
+## 通过 CSS 调整图标尺寸
 
-The CSS properties `width` and `height` can be used to adjust the icon size.
+可以使用 CSS 属性 `width` 和 `height` 来调整图标尺寸。
 
 <Sandpack
   template="react"
@@ -46,9 +46,9 @@ The CSS properties `width` and `height` can be used to adjust the icon size.
   }"
 />
 
-### Dynamically change the icon size based on the font size
+### 根据字体大小动态更改图标尺寸
 
-It is possible to resize icons based on font size. This can be achieved using the `em` unit. See this [MDN article](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems) for more information on the `em` unit.
+可以根据字体大小来调整图标尺寸。这可以通过使用 `em` 单位来实现。有关 `em` 单位的更多信息，请参阅此 [MDN 文章](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#ems)。
 
 <Sandpack
   template="react"
@@ -64,9 +64,9 @@ It is possible to resize icons based on font size. This can be achieved using th
   }"
 />
 
-### Resizing with Tailwind
+### 使用 Tailwind 调整尺寸
 
-`h-*` and `w-*` utilities can be used to adjust the size of the icon.
+可以使用 `h-*` 和 `w-*` 工具类来调整图标尺寸。
 
 <Sandpack
   template="react"

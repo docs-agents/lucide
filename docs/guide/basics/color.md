@@ -5,15 +5,15 @@ import buttonExampleFiles from './examples/button-example/files.ts'
 import iconColorExampleFiles from './examples/color-icon/files.ts'
 </script>
 
-# Color
+# 颜色
 
-By default, all icons have the color value: `currentColor`. This keyword uses the element's computed text `color` value to represent the icon color.
+默认情况下，所有图标的颜色值为 `currentColor`。此关键字使用元素的计算文本 `color` 值来表示图标颜色。
 
-Read more about [ `currentColor` on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword).
+了解更多关于 [MDN 上的 `currentColor`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentcolor_keyword)。
 
-## Adjust the color using the `color` prop
+## 使用 `color` 属性调整颜色
 
-The color can be adjusted by passing the color prop to the element.
+可以通过向元素传递 color 属性来调整颜色。
 
 <Sandpack
   template="react"
@@ -30,11 +30,11 @@ The color can be adjusted by passing the color prop to the element.
   }"
 />
 
-## Using parent elements text color value
+## 使用父元素的文本颜色值
 
-Because the color of lucide icons uses `currentColor`, the color of the icon depends on the computed `color` of the element, or it inherits it from its parent.
+由于 lucide 图标使用 `currentColor`，因此图标的颜色取决于元素的计算 `color`，或者从其父元素继承。
 
-For example, if a parent element's color value is `#fff` and one of the children is a lucide icon, the color of the icon will be rendered  as `#fff`. This is browser native behavior.
+例如，如果父元素的颜色值为 `#fff`，且其中一个子元素是 lucide 图标，则该图标的颜色将渲染为 `#fff`。这是浏览器的原生行为。
 
 <Sandpack
   template="react"

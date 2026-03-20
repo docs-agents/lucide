@@ -1,93 +1,89 @@
-# Aliased Names
+# 别名名称
 
-Icons can have multiple names for the same icon. This is because we choose to rename some icons to make them more consistent with the rest of the icon set, or the name was not generic. For example, the `edit-2` icon is renamed to `pen` to make the name more generic, since it is just a pen icon.
+同一个图标可以有多个名称。这是因为我们会重命名一些图标以使其与图标集中的其他图标更加一致，或者原名称不够通用。例如，`edit-2` 图标被重命名为 `pen`，以使名称更加通用，因为它只是一个钢笔图标。
 
-Beside aliases names lucide also includes prefixed and suffixed names to use within your project. This is to prevent import name collisions with other libraries or your own code.
+除了别名之外，lucide 还包含带前缀和带后缀的名称，以便在项目中使用。这是为了防止与其他库或您自己的代码发生导入名称冲突。
 
 ```tsx
-// These are all the same icon
-import {
-  House,
-  HouseIcon,
-  LucideHouse,
-} from "lucide-react";
+// 这些都是同一个图标
+import { House, HouseIcon, LucideHouse } from 'lucide-react';
 ```
 
-## Choosing import name style
+## 选择导入名称样式
 
-To be consistent in your imports or want to change the autocompletion of Lucide icons in your IDE there an option to able the choose the import name style you want.
+为了保持导入的一致性，或想要更改 IDE 中 Lucide 图标的自动补全，可以选择一个您想使用的导入名称样式。
 
-This can be done by creating a custom module declaration file to override the lucide imports and turning off the autocomplete in your IDE.
+您可以通过创建自定义模块声明文件来覆盖 lucide 导入，并在 IDE 中关闭自动补全来实现。
 
-### Turn off autocomplete in your IDE
+### 在 IDE 中关闭自动补全
 
 ```json [.vscode/settings.json]
 {
   "typescript.preferences.autoImportFileExcludePatterns": [
-    "lucide-react", // or
-    "lucide-preact", // or
-    "lucide-react-native", // or
-    "lucide-vue-next",
+    "lucide-react", // 或
+    "lucide-preact", // 或
+    "lucide-react-native", // 或
+    "lucide-vue-next"
   ]
 }
 ```
 
-### Create a custom module declaration file
+### 创建自定义模块声明文件
 
-Only available for `lucide-react`, `lucide-preact`, `lucide-react-native`, `lucide-vue-next` package.
-This will enable you to choose the import name style you want to use in your project.
+仅适用于 `lucide-react`、`lucide-preact`、`lucide-react-native`、`lucide-vue-next` 包。
+这将使您能够选择想在项目中使用的导入名称样式。
 
 ::: code-group
 
 ```ts [React]
-declare module "lucide-react" {
-  // Prefixed import names
-  export * from "lucide-react/dist/lucide-react.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-react/dist/lucide-react.suffixed";
+declare module 'lucide-react' {
+  // 带前缀的导入名称
+  export * from 'lucide-react/dist/lucide-react.prefixed';
+  // 或
+  // 带后缀的导入名称
+  export * from 'lucide-react/dist/lucide-react.suffixed';
 }
 ```
 
 ```ts [Vue]
-declare module "lucide-vue-next" {
-  // Prefixed import names
-  export * from "lucide-vue-next/dist/lucide-vue-next.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-vue-next/dist/lucide-vue-next.suffixed";
+declare module 'lucide-vue-next' {
+  // 带前缀的导入名称
+  export * from 'lucide-vue-next/dist/lucide-vue-next.prefixed';
+  // 或
+  // 带后缀的导入名称
+  export * from 'lucide-vue-next/dist/lucide-vue-next.suffixed';
 }
 ```
 
 ```ts [Preact]
-declare module "lucide-preact" {
-  // Prefixed import names
-  export * from "lucide-preact/dist/lucide-preact.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-preact/dist/lucide-preact.suffixed";
+declare module 'lucide-preact' {
+  // 带前缀的导入名称
+  export * from 'lucide-preact/dist/lucide-preact.prefixed';
+  // 或
+  // 带后缀的导入名称
+  export * from 'lucide-preact/dist/lucide-preact.suffixed';
 }
 ```
 
 ```ts [React Native]
-declare module "lucide-react-native" {
-  // Prefixed import names
-  export * from "lucide-react-native/dist/lucide-react-native.prefixed";
-  // or
-  // Suffixed import names
-  export * from "lucide-react-native/dist/lucide-react-native.suffixed";
+declare module 'lucide-react-native' {
+  // 带前缀的导入名称
+  export * from 'lucide-react-native/dist/lucide-react-native.prefixed';
+  // 或
+  // 带后缀的导入名称
+  export * from 'lucide-react-native/dist/lucide-react-native.suffixed';
 }
 ```
 
 :::
 
-Place this in your project root or in a folder where your tsconfig.json is located, or locate it in your defined type directory.
-Easiest way is to create a `@types` folder in your project root and name the file `[package-name].d.ts`.
+将此文件放在项目根目录或 tsconfig.json 所在的文件夹中，或将其放在您定义的类型目录中。
+最简单的方法是在项目根目录中创建一个 `@types` 文件夹，并将文件命名为 `[package-name].d.ts`。
 
-### Import name styles
+### 导入名称样式
 
-| Import Style  | Available imports           | Declaration file import |
-| ------------- | --------------------------- | ----------------------- |
-| Default       | Home, HomeIcon, LucideHome  |                         |
-| Prefixed      | LucideHome                  | [package].prefixed      |
-| Suffixed      | HomeIcon                    | [package].suffixed      |
+| 导入样式 | 可用导入                   | 声明文件导入       |
+| -------- | -------------------------- | ------------------ |
+| 默认     | Home, HomeIcon, LucideHome |                    |
+| 带前缀   | LucideHome                 | [package].prefixed |
+| 带后缀   | HomeIcon                   | [package].suffixed |

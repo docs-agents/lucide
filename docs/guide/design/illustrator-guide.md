@@ -1,31 +1,31 @@
 ---
-title: Illustrator Template Guide
+title: Illustrator 模板指南
 ---
 
-# Illustrator Template Guide
+# Illustrator 模板指南
 
-This Guide explains how to properly use the Adobe Illustrator Template for Lucide.
+本指南说明如何正确使用 Lucide 的 Adobe Illustrator 模板。
 
->Attention: Even though it is unlikely the template can be outdated or not 100% correct. Please check the Icon Design Guide before you start working with the template to ensure integrity with the Lucide icon pack.
+> 注意：虽然模板不太可能过时或不 100% 正确。但在使用模板之前，请查阅图标设计指南，以确保与 Lucide 图标包的一致性。
 
-## General Workflow
+## 通用工作流程
 
-The Illustrator template is created following guidelines from the [Icon Design Guide](icon-design-guide.md).
+Illustrator 模板是按照[图标设计指南](icon-design-guide.md)中的规范创建的。
 
-**Workflow:**
+**工作流程：**
 
-1. Download and open the [Illustrator template](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai).
+1. 下载并打开 [Illustrator 模板](https://github.com/lucide-icons/lucide/blob/main/docs/public/templates/illustrator_template.ai)。
 
-2. You can now remove the content from the example logo layer ("Draw") and start creating.
+2. 您现在可以删除示例图标图层（"Draw"）中的内容并开始创建。
 
-3. Verify that you follow the [Icon Design Guidelines](icon-design-guide.md).
+3. 验证您是否遵循[图标设计指南](icon-design-guide.md)。
 
-4. Before you export the file as an SVG make sure to check that you followed the guidelines and remove all unnecessary layers (especially "Padding" and "Grid").
+4. 在将文件导出为 SVG 之前，请确保已遵循指南并删除所有不必要的图层（尤其是 "Padding" 和 "Grid"）。
 
-5. Export the file with the export menu under: `Export > Export As..` then save the file as SVG. Select the following options in the SVG Options dialog:
+5. 使用导出菜单导出文件：`Export > Export As..`，然后将文件保存为 SVG。在 SVG 选项对话框中选择以下选项：
 
-![SVG export options in Illustrator](../../images/illustrator-svg-options.png?raw=true "Setting Page Size")
+![Illustrator 中的 SVG 导出选项](../../images/illustrator-svg-options.png?raw=true '设置页面大小')
 
-After that, double check that the [code conventions and SVG global attributes](icon-design-guide.md#code-conventions) are correct.
+之后，请再次检查[代码规范和 SVG 全局属性](icon-design-guide.md#code-conventions)是否正确。
 
-7. Minify paths with [SVGOMG](https://jakearchibald.github.io/svgomg/).
+7. 使用 [SVGOMG](https://jakearchibald.github.io/svgomg/) 压缩路径。

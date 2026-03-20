@@ -1,36 +1,38 @@
 # Lucide Static
 
-Static assets and utilities for Lucide icons that work without JavaScript frameworks. This package provides multiple formats including individual SVG files, SVG sprites, icon fonts, and Node.js utilities for server-side rendering and static site generation.
+Lucide 图标的静态资源和工作套件，无需 JavaScript 框架即可使用。此包提供了多种格式，包括单个 SVG 文件、SVG 精灵图、图标字体以及用于服务端渲染和静态站点生成的 Node.js 工具。
 
-**What you can accomplish:**
-- Use individual SVG files as images or CSS background images
-- Implement icon fonts for CSS-based icon systems
-- Create SVG sprites for efficient icon loading in static sites
-- Import SVG strings in Node.js applications and server-side rendering
-- Build static websites and applications without JavaScript framework dependencies
+**功能概述：**
 
-This package includes the following implementations of Lucide icons:
+- 将单个 SVG 文件用作图片或 CSS 背景图片
+- 实现图标字体以支持基于 CSS 的图标系统
+- 创建 SVG 精灵图以高效加载静态站点中的图标
+- 在 Node.js 应用和服务端渲染中导入 SVG 字符串
+- 构建无需 JavaScript 框架依赖的静态网站和应用
 
-- Individual SVG files
-- SVG sprite
-- Icon font files
-- A JavaScript library exporting SVG strings
+此包包含以下 Lucide 图标实现：
 
-## Who is this for?
+- 单个 SVG 文件
+- SVG 精灵图
+- 图标字体文件
+- 导出 SVG 字符串的 JavaScript 库
 
-`lucide-static` is suitable for _very specific use cases_ where you want to use Lucide icons without relying on a JavaScript framework or component system. It's ideal for:
+## 适用场景
 
-- Projects that use icon fonts with plain CSS or utility-first frameworks
-- Embedding raw SVG files or sprites directly in HTML
-- Using SVGs as CSS background images
-- Importing SVG strings into Node.js (CommonJS) environments
+`lucide-static` 适用于*非常特定的用例*，即你想在不依赖 JavaScript 框架或组件系统的情况下使用 Lucide 图标。适合以下场景：
+
+- 使用纯 CSS 或 utility-first 框架的图标字体项目
+- 直接在 HTML 中嵌入原始 SVG 文件或精灵图
+- 将 SVG 用作 CSS 背景图片
+- 在 Node.js (CommonJS) 环境中导入 SVG 字符串
 
 ::: danger
-### Not recommended for production {#production-warning}
 
-SVG sprites and icon fonts include **all icons**, which can significantly increase your app's bundle size and load time.
+### 不推荐用于生产环境 {#production-warning}
 
-For production environments, we recommend using a bundler with tree-shaking support to include only the icons you actually use. Consider using:
+SVG 精灵图和图标字体包含*所有图标*，这可能会显著增加应用的包体积和加载时间。
+
+对于生产环境，我们建议使用支持 tree-shaking 的打包工具，只包含你实际使用的图标。推荐使用：
 
 - [lucide](lucide)
 - [lucide-react](lucide-react)
@@ -38,9 +40,9 @@ For production environments, we recommend using a bundler with tree-shaking supp
 - [lucide-vue-next](lucide-vue-next)
 - [lucide-angular](lucide-angular)
 - [lucide-preact](lucide-preact)
-:::
+  :::
 
-## Installation
+## 安装
 
 ::: code-group
 
@@ -62,31 +64,31 @@ bun add lucide-static
 
 :::
 
-## SVG Files
+## SVG 文件
 
-You can use standalone SVG files or SVG sprites in several ways.
+你可以使用独立的 SVG 文件或 SVG 精灵图，方式如下：
 
-Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprite-lz1kk).
+查看我们的 [codesandbox 示例](https://codesandbox.io/s/using-the-svg-sprite-lz1kk)。
 
-### SVG file as image
+### SVG 文件作为图片
 
-#### In HTML:
+#### 在 HTML 中：
 
 ::: code-group
 
 ```html [Webpack]
-<!-- SVG file for a single icon -->
+<!-- 单个图标的 SVG 文件 -->
 <img src="~lucide-static/icons/house.svg" />
 ```
 
 ```html [CDN]
-<!-- SVG file for a single icon -->
+<!-- 单个图标的 SVG 文件 -->
 <img src="https://unpkg.com/lucide-static@latest/icons/house.svg" />
 ```
 
 :::
 
-#### In CSS:
+#### 在 CSS 中：
 
 ::: code-group
 
@@ -104,11 +106,11 @@ Check out our [codesandbox example](https://codesandbox.io/s/using-the-svg-sprit
 
 :::
 
-Make sure you have the correct Webpack loader configured, such as [`url-loader`](https://v4.webpack.js.org/loaders/url-loader/).
+请确保已正确配置 Webpack 加载器，例如 [`url-loader`](https://v4.webpack.js.org/loaders/url-loader/)。
 
-### SVG file as string
+### SVG 文件作为字符串
 
-To import an SVG as a string (e.g., for templating):
+导入 SVG 作为字符串（例如用于模板）：
 
 ::: code-group
 
@@ -122,24 +124,23 @@ import arrowRightIcon from 'lucide-static/icons/arrow-right.svg?raw';
 
 :::
 
-You'll need an SVG loader like [`svg-inline-loader`](https://v4.webpack.js.org/loaders/svg-inline-loader/).
+你需要使用 SVG 加载器，如 [`svg-inline-loader`](https://v4.webpack.js.org/loaders/svg-inline-loader/)。
 
-
-### Using the SVG sprite
+### 使用 SVG 精灵图
 
 :::danger
-[Not intended for production use.](#production-warning)
+[不适用于生产环境。](#production-warning)
 :::
 
-You may also need an additional SVG loader to handle this.
+你可能还需要额外的 SVG 加载器来处理此功能。
 
-#### Basic sprite usage (not production-optimized):
+#### 基本精灵图用法（非生产优化）：
 
 ```html
 <img src="lucide-static/sprite.svg#house" />
 ```
 
-#### Inline usage:
+#### 内联用法：
 
 ```html
 <svg
@@ -154,13 +155,13 @@ You may also need an additional SVG loader to handle this.
   <use href="#alert-triangle" />
 </svg>
 
-<!-- sprite SVG -->
+<!-- 精灵图 SVG -->
 <svg>...</svg>
 ```
 
-#### Inline with CSS helper class
+#### 使用 CSS 辅助类内联
 
-If you'd prefer, you can use CSS to hold your base SVG properties:
+如果你愿意，可以使用 CSS 来设置基础 SVG 属性：
 
 ```css
 .lucide-icon {
@@ -174,7 +175,7 @@ If you'd prefer, you can use CSS to hold your base SVG properties:
 }
 ```
 
-...and update the SVG as follows:
+...然后按如下方式更新 SVG：
 
 ```xml
 <svg
@@ -184,17 +185,17 @@ If you'd prefer, you can use CSS to hold your base SVG properties:
   <use href="#triangle-alert" />
 </svg>
 
-<!-- sprite SVG -->
+<!-- 精灵图 SVG -->
 <svg>...</svg>
 ```
 
-## Icon font
+## 图标字体
 
 :::danger
-[Not intended for production use.](#production-warning)
+[不适用于生产环境。](#production-warning)
 :::
 
-Lucide icons are also available as a web font. To use them, you first need to include the corresponding stylesheet:
+Lucide 图标也可作为网页字体使用。要使用它们，首先需要引入对应的样式表：
 
 ::: code-group
 
@@ -207,46 +208,52 @@ Lucide icons are also available as a web font. To use them, you first need to in
 ```
 
 ```html [CDN]
-<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+/>
 ```
 
-```html [Static asset]
-<link rel="stylesheet" href="/your/path/to/lucide.css" />
+```html [静态资源]
+<link
+  rel="stylesheet"
+  href="/your/path/to/lucide.css"
+/>
 ```
 
 :::
 
-Once included, use the format `icon-{kebab-case-name}`. You can copy icon names from the [Lucide Icons page](https://lucide.dev/icons).
+引入后，使用格式 `icon-{kebab-case-name}`。你可以从 [Lucide Icons 页面](https://lucide.dev/icons) 复制图标名称。
 
 ```html
 <div class="icon-house"></div>
 ```
 
-If you're not using a package manager, you can download the font files directly from the [latest release](https://github.com/lucide-icons/lucide/releases/latest).
+如果你没有使用包管理器，可以直接从 [最新版本](https://github.com/lucide-icons/lucide/releases/latest) 下载字体文件。
 
 ## Node.js
 
-You can also import Lucide icons in Node.js projects:
+你也可以在 Node.js 项目中导入 Lucide 图标：
 
 ::: code-group
 
 ```js [ESM]
-import {MessageSquare} from 'lucide-static';
+import { MessageSquare } from 'lucide-static';
 ```
 
 ```js [CommonJs]
-const {MessageSquare} = require('lucide-static');
+const { MessageSquare } = require('lucide-static');
 ```
 
 :::
 
-> Note: Each icon name is in PascalCase.
+> 注意：每个图标名称使用 PascalCase 格式。
 
-#### Express app example in Node.js
+#### Node.js 中的 Express 应用示例
 
 ```js
 import express from 'express';
-import {MessageSquare} from 'lucide-static';
+import { MessageSquare } from 'lucide-static';
 const app = express();
 const port = 3000;
 

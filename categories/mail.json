@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
-  "title": "Mail",
+  "title": "Mail（邮件）",
   "icon": "mail"
 }

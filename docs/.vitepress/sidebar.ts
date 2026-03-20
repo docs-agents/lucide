@@ -3,51 +3,51 @@ import { DefaultTheme, UserConfig } from 'vitepress';
 const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
   guide: [
     {
-      text: 'Introduction',
+      text: '简介',
       items: [
-        { text: 'What is lucide?', link: '/guide/' },
-        { text: 'Installation', link: '/guide/installation' },
-        { text: 'Comparison', link: '/guide/comparison' },
+        { text: '什么是 Lucide？', link: '/guide/' },
+        { text: '安装', link: '/guide/installation' },
+        { text: '对比', link: '/guide/comparison' },
       ],
     },
     {
-      text: 'Basics',
+      text: '基础',
       items: [
         {
-          text: 'Color',
+          text: '颜色',
           link: '/guide/basics/color',
         },
         {
-          text: 'Sizing',
+          text: '尺寸',
           link: '/guide/basics/sizing',
         },
         {
-          text: 'Stroke width',
+          text: '描边宽度',
           link: '/guide/basics/stroke-width',
         },
       ],
     },
     // TODO: Add this section
     {
-      text: 'Advanced',
+      text: '进阶',
       items: [
         {
-          text: 'Accessibility',
+          text: '无障碍',
           link: '/guide/advanced/accessibility',
         },
         {
-          text: 'Global styling',
+          text: '全局样式',
           link: '/guide/advanced/global-styling',
         },
         // {
         //   text: 'Animations',
         // },
         {
-          text: 'Filled icons',
+          text: '填充图标',
           link: '/guide/advanced/filled-icons',
         },
         {
-          text: 'Aliased Names',
+          text: '别名',
           link: '/guide/advanced/aliased-names',
         },
         // {
@@ -62,7 +62,7 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       ],
     },
     {
-      text: 'Packages',
+      text: '包',
       items: [
         {
           text: 'Lucide',
@@ -107,26 +107,26 @@ const sidebar: UserConfig<DefaultTheme.Config>['themeConfig']['sidebar'] = {
       ],
     },
     {
-      text: 'Contributing',
+      text: '贡献',
       items: [
         {
-          text: 'Icon Design Principles',
+          text: '图标设计原则',
           link: '/guide/design/icon-design-guide',
         },
         {
-          text: 'Designing in Illustrator',
+          text: '在 Illustrator 中设计',
           link: '/guide/design/illustrator-guide',
         },
         {
-          text: 'Designing in InkScape',
+          text: '在 InkScape 中设计',
           link: '/guide/design/inkscape-guide',
         },
         {
-          text: 'Designing in Figma',
+          text: '在 Figma 中设计',
           link: '/guide/design/figma-guide',
         },
         {
-          text: 'Designing in Affinity Designer',
+          text: '在 Affinity Designer 中设计',
           link: '/guide/design/affinity-designer-guide',
         },
       ],

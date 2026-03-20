@@ -1,51 +1,56 @@
 ---
-title: Figma Template Guide
+title: Figma 模板指南
 ---
 
-# Figma Template Guide
+# Figma 模板指南
 
-This guide shows the steps to setup Figma for creating icons that conform to the Featherity design guidelines.
+本指南展示了在 Figma 中设置符合 Feather Icons 设计规范的图标创作步骤。
 
-## Setting Up The Frame
-When you create a new document in Figma, the document. Each individual icon you want to create, has to be created in a separate frame.
+## 设置画框
 
-To do this, create a frame of 24x24 pixels.
+在 Figma 中创建新文档时，每个需要创建的图标都必须在独立的画框中进行。
 
-1. Click the frame button (or press `F`)
-2. Draw a 24x24 frame (or edit it afterwards from the design window)
+具体操作如下，创建一个 24x24 像素的画框：
 
-In this newly created frame, you will create your icon. If you want, you can change the name of your frame to the name of the icon you are going to create. Then it will be exported as `FRAME-NAME.svg`.
+1. 点击画框按钮（或按 `F` 键）
+2. 绘制一个 24x24 的画框（或者之后在设计窗口中修改尺寸）
 
-## Create Your icon
-To design your icon in the style of Feather Icons, you need to adjust a few settings in Figma.
+在这个新建的画框中，你将创建你的图标。你可以根据需要将画框名称改为即将创建的图标名称。导出时将自动生成为 `FRAME-NAME.svg` 文件。
 
-Draw in your new frame with the pen tool. You can open it with the window at the top, or with the shortcut `P`. Once you click in your frame, you can adjust the settings for the pen tool in the design-window on the right.
+## 创建图标
 
-Set the following:
-1. Vector
-   1. Corner radius: 2px
-2. Stroke
-   1. Stroke width: 2px
-   2. Stroke alignment: center
+要在 Feather Icons 的风格下设计图标，你需要在 Figma 中调整一些设置。
 
-![Figma Stroke Options](../../images/figma-stroke-options.png)
+使用钢笔工具在新画框中绘制。你可以通过顶部的窗口打开钢笔工具，或使用快捷键 `P`。在画框中点击后，你可以在右侧的设计窗口中调整钢笔工具的设置。
 
-## Export Or Copy Your Icon
-Once you have completed your icon, you can export it.
+设置以下参数：
 
-1. Select the frame
-2. Open the *Export* tab on the right
-3. Set the file type as SVG
-4. Press export
+1. Vector（矢量）
+   1. 圆角半径：2px
+2. Stroke（描边）
+   1. 描边宽度：2px
+   2. 描边对齐：居中
 
-Or you can also copy its source as SVG.
+![Figma 描边选项](../../images/figma-stroke-options.png)
 
-1. Select the frame
-2. Right click it
-3. Click on *Copy/Paste as*
-4. Click on *Copy as SVG*
+## 导出或复制图标
 
-That's it. You just made your first icon. Congratulations!
+完成图标后，你可以进行导出。
 
-## Figma Tips
-1. The [Icon Design Guidelines](icon-design-guide.md) dictate that you keep 2px spacing between detached elements. In Figma, you can easily check this with: `⌥` Option (MacOS) or `Alt` (Windows).
+1. 选中画框
+2. 在右侧打开 _Export_（导出）标签页
+3. 将文件类型设置为 SVG
+4. 点击导出
+
+你也可以复制其 SVG 源代码：
+
+1. 选中画框
+2. 右键点击
+3. 点击 _Copy/Paste as_（复制/粘贴为）
+4. 点击 _Copy as SVG_（复制为 SVG）
+
+完成！恭喜你完成了第一个图标！
+
+## Figma 使用技巧
+
+1. [图标设计指南](icon-design-guide.md) 规定分离元素之间需保持 2px 的间距。在 Figma 中，你可以轻松检查这一点：MacOS 使用 `⌥` Option 键，Windows 使用 `Alt` 键。

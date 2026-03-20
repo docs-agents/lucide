@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
-  "title": "Charts",
+  "title": "Charts（图表）",
   "icon": "chart-pie"
 }

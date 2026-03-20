@@ -4,13 +4,13 @@ import sandpackTheme from '../../.vitepress/theme/sandpackTheme.json'
 import sizeIconExample from './examples/filled-icon-example/files.ts'
 </script>
 
-# Filled Icons
+# 填充图标
 
-Fills are officially not supported.
-However, all SVG properties are available on all icons.
-Fill can still be used and will work fine on certain icons.
+官方暂不支持填充功能。
+但是，所有 SVG 属性在所有图标上都是可用的。
+填充功能仍然可以使用，在某些图标上可以正常工作。
 
-Example with stars:
+星星示例：
 <Sandpack
   template="react"
   :theme="sandpackTheme"
@@ -26,6 +26,6 @@ Example with stars:
   }"
 />
 
-## Will Lucide have fills in the future?
+## Lucide 未来会有填充功能吗？
 
-This feature has been requested several times and discussion is happening at [#458](https://github.com/lucide-icons/lucide/discussions/458).
+此功能已被多次请求，相关讨论正在进行中，详见 [#458](https://github.com/lucide-icons/lucide/discussions/458)。

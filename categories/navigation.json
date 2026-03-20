@@ -1,5 +1,5 @@
 {
   "$schema": "../category.schema.json",
-  "title": "Navigation, Maps, and POIs",
+  "title": "Navigation, Maps, and POIs（导航、地图和地点）",
   "icon": "compass"
 }

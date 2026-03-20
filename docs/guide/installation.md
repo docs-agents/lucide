@@ -1,12 +1,12 @@
 ---
-title: Installation
+title: 安装
 ---
 
-# Installation
+# 安装
 
 ## Web
 
-Implementation of the lucide icon library for web applications.
+适用于 Web 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -28,11 +28,11 @@ bun add lucide
 
 :::
 
-For more details, see the [documentation](packages/lucide.md).
+更多详情，请参阅[文档](packages/lucide.md)。
 
 ## React
 
-Implementation of the lucide icon library for React applications.
+适用于 React 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -54,12 +54,12 @@ bun add lucide-react
 
 :::
 
-For more details, see the [documentation](packages/lucide-react.md).
-For React Native use the `lucide-react-native` package.
+更多详情，请参阅[文档](packages/lucide-react.md)。
+React Native 请使用 `lucide-react-native` 包。
 
 ## Vue
 
-Implementation of the lucide icon library for Vue applications.
+适用于 Vue 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -81,12 +81,12 @@ bun add lucide-vue-next
 
 :::
 
-For more details, see the [documentation](packages/lucide-vue-next.md).
-For Vue 2 use the `lucide-vue` package.
+更多详情，请参阅[文档](packages/lucide-vue-next.md)。
+Vue 2 请使用 `lucide-vue` 包。
 
 ## Svelte
 
-Implementation of the lucide icon library for Svelte applications.
+适用于 Svelte 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -107,13 +107,14 @@ bun add @lucide/svelte
 ```
 
 :::
-> `@lucide/svelte` is only for Svelte 5, for Svelte 4 use the `lucide-svelte` package.
 
-For more details, see the [documentation](packages/lucide-svelte.md).
+> `@lucide/svelte` 仅适用于 Svelte 5，Svelte 4 请使用 `lucide-svelte` 包。
+
+更多详情，请参阅[文档](packages/lucide-svelte.md)。
 
 ## Solid
 
-Implementation of the lucide icon library for Solid applications.
+适用于 Solid 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -135,11 +136,11 @@ bun add lucide-solid
 
 :::
 
-For more details, see the [documentation](packages/lucide-solid.md).
+更多详情，请参阅[文档](packages/lucide-solid.md)。
 
 ## Angular
 
-Implementation of the lucide icon library for Angular applications.
+适用于 Angular 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -161,11 +162,11 @@ bun add lucide-angular
 
 :::
 
-For more details, see the [documentation](packages/lucide-angular.md).
+更多详情，请参阅[文档](packages/lucide-angular.md)。
 
 ## Preact
 
-Implementation of the lucide icon library for preact applications.
+适用于 Preact 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -185,14 +186,13 @@ npm install lucide-preact
 bun add lucide-preact
 ```
 
-
 :::
 
-For more details, see the [documentation](packages/lucide-preact.md).
+更多详情，请参阅[文档](packages/lucide-preact.md)。
 
 ## Astro
 
-Implementation of the lucide icon library for Astro applications.
+适用于 Astro 应用程序的 Lucide 图标库实现。
 
 ::: code-group
 
@@ -214,11 +214,11 @@ bun add @lucide/astro
 
 :::
 
-For more details, see the [documentation](packages/lucide-astro.md).
+更多详情，请参阅[文档](packages/lucide-astro.md)。
 
-## Static usage
+## 静态使用
 
-Implementation of the lucide icon library for multiple usages that like to use: SVG files icons, SVG Sprite, Icon Fonts and static SVG strings export in Common JS modules (for NodeJS).
+适用于多种使用场景的 Lucide 图标库实现，包括：SVG 文件图标、SVG 精灵图、图标字体以及 Common JS 模块中的静态 SVG 字符串导出（用于 NodeJS）。
 
 ::: code-group
 
@@ -240,22 +240,22 @@ bun add lucide-static
 
 :::
 
-For more details, see the [documentation](packages/lucide-static.md).
+更多详情，请参阅[文档](packages/lucide-static.md)。
 
 ## Figma
 
-The lucide figma plugin.
+Lucide Figma 插件。
 
-Visit [Figma community page](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) to install the plugin.
+请访问 [Figma 社区页面](https://www.figma.com/community/plugin/939567362549682242/Lucide-Icons) 安装插件。
 
-![Setting Page Size](https://www.figma.com/community/plugin/939567362549682242/thumbnail 'Figma Lucide Cover')
+![设置页面大小](https://www.figma.com/community/plugin/939567362549682242/thumbnail 'Figma Lucide 封面')
 
 ## Flutter
 
-Implementation of Lucide icon library for Flutter applications.
+适用于 Flutter 应用程序的 Lucide 图标库实现。
 
 ```bash
 flutter pub add lucide_icons
 ```
 
-For more details, see the [pub.dev](https://pub.dev/packages/lucide_icons).
+更多详情，请参阅 [pub.dev](https://pub.dev/packages/lucide_icons)。
